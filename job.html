@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pacific Alliances Software Company LTD - Job Application Form. Submit your application for open software engineering positions.">
+    <meta name="author" content="Pacific Alliances Software Company LTD">
+    <title>Job Position Descriptions - Pacific Alliances Software Company LTD</title>
+    <!-- File CSS dùng chung cho toàn bộ website -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ===== STYLE RIÊNG CHO TRANG JOBS (dùng chung bảng màu với style.css) ===== */
+
+        /* Nút Jobs ở navbar khi đang ở trang này */
+        .site-navbar #nav-link-jobs.active,
+        .site-navbar #nav-link-jobs.active:hover,
+        .site-navbar #nav-link-jobs[aria-current="page"] {
+            background: linear-gradient(135deg, var(--color-blue-violet) 0%, var(--color-dark-blue) 100%);
+            color: #FFFFFF;
+            border-color: var(--color-dark-blue);
+        }
+
+        /* Phần giới thiệu đầu trang */
+        .jobs-intro {
+            text-align: center;
+            margin-bottom: 34px;
+        }
+        .jobs-intro h2 {
+            font-size: 1.95rem;
+            font-weight: 800;
+            color: var(--color-dark-blue);
+            margin-bottom: 10px;
+        }
+        .jobs-intro p {
+            color: var(--text-secondary);
+            max-width: 760px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+        }
+
+        /* Thẻ từng vị trí tuyển dụng */
+        .job-listing {
+            margin-bottom: 28px;
+        }
+        .job-card {
+            padding: 32px 30px;
+        }
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding-bottom: 14px;
+            margin-bottom: 16px;
+            border-bottom: 2px solid var(--border-light);
+        }
+        .job-header h2 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--color-dark-blue);
+        }
+        .job-ref {
+            background-color: var(--bg-box-tint);
+            color: var(--color-kikyo-iroiro);
+            border: 1px solid var(--border-light);
+            padding: 5px 14px;
+            border-radius: var(--radius-full);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .job-ref strong {
+            color: var(--color-dark-blue);
+            letter-spacing: 0.04em;
+        }
+        .job-summary {
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        /* Tiêu đề phụ trong mỗi job */
+        .job-card h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--color-hanada);
+            margin: 22px 0 10px;
+        }
+        .job-card h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--color-kikyo-iroiro);
+            margin: 14px 0 6px;
+        }
+
+        /* Lương / người báo cáo / địa điểm */
+        .job-card dl {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 8px 16px;
+            background-color: var(--bg-box-tint);
+            border-left: 5px solid var(--color-kikyo-iroiro);
+            border-radius: var(--radius-md);
+            padding: 16px 20px;
+        }
+        .job-card dt {
+            font-weight: 700;
+            color: var(--color-dark-blue);
+        }
+        .job-card dd {
+            color: var(--text-secondary);
+        }
+
+        /* Danh sách (khôi phục bullet vì style.css đang reset list-style) */
+        .job-card ul,
+        .job-aside ol {
+            padding-left: 22px;
+            color: var(--text-secondary);
+        }
+        .job-card ul {
+            list-style: disc;
+        }
+        .job-aside ol {
+            list-style: decimal;
+        }
+        .job-card li,
+        .job-aside li {
+            margin-bottom: 7px;
+            line-height: 1.55;
+        }
+        .job-card li::marker,
+        .job-aside li::marker {
+            color: var(--color-kikyo-iroiro);
+            font-weight: 700;
+        }
+
+        /* Khối aside "How to Apply" */
+        .job-aside {
+            background: linear-gradient(135deg, var(--bg-box-tint) 0%, #FFFFFF 100%);
+            border: 2px solid var(--color-fuji-purple);
+            padding: 28px 30px;
+        }
+        .job-aside h2 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--color-dark-blue);
+            margin-bottom: 12px;
+        }
+        .job-aside a {
+            font-weight: 600;
+            text-decoration: underline;
+        }
+        .job-aside small {
+            color: var(--text-light);
+        }
+
+        @media (max-width: 768px) {
+            .job-card dl {
+                grid-template-columns: 1fr;
+                gap: 2px;
+            }
+            .job-card dd {
+                margin-bottom: 8px;
+            }
+        }
+    </style>
+</head>
+
+<!-- ================= HEADER & NAVBAR CHUNG ================= -->
+<body id="page-jobs" class="page-jobs">
+<header id="main-header" class="site-header">
+    <div id="header-container" class="header-container">
+        
+        <!-- Tên công ty / Thương hiệu (Bên trái) -->
+        <div id="company-branding" class="branding-box">
+            <h1 id="site-title" class="company-name">Pacific Alliances Software Company LTD</h1>
+            <p id="site-tagline" class="company-tagline">Empowering Innovation, Engineering Excellence</p>
+        </div>
+
+        <!-- Thanh menu điều hướng 4 trang -->
+        <nav id="main-navbar" class="site-navbar" aria-label="Main Navigation">
+            <ul id="navbar-menu" class="navbar-list">
+                <li class="navbar-item">
+                    <a id="nav-link-home" class="navbar-link" href="index.html">Home</a>
+                </li>
+                <li class="navbar-item">
+                    <a id="nav-link-jobs" class="navbar-link active" href="job.html">Jobs</a>
+                </li>
+                <li class="navbar-item">
+                    <a id="nav-link-apply" class="navbar-link" href="apply.html">Apply</a>
+                </li>
+                <li class="navbar-item">
+                    <a id="nav-link-about" class="navbar-link" href="about.html">About Us</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Logo công ty (Bên phải - Tuỳ chọn theo bản vẽ) -->
+        <div id="header-logo-container" class="logo-box">
+            <a href="index.html" class="logo-link">
+                <img id="company-logo" class="site-logo" src="images/logo.svg" alt="Pacific Alliances Software Company LTD Logo">
+            </a>
+        </div>
+
+    </div>
+</header>
+<!-- ======================================================== -->
+    <main id="main-content" class="content-wrapper">
+
+        <!-- Page introduction -->
+        <section id="jobs-intro-section" class="jobs-intro">
+            <h2 id="jobs-page-title">Job Postitions Available</h2>
+            <p>
+                Join a growing engineering team in Singapore building reliable software for
+                clients across Asia-Pacific. Below are our open positions. Please quote the
+                reference number when you apply.
+            </p>
+        </section>
+
+ <!-- ================= JOB 1 ================= -->
+        <section id="job-fullstack" class="job-listing">
+            <article class="job-card content-box">
+                <header class="job-header">
+                    <h2 id="job-title-fullstack">Senior Full-Stack Engineer</h2>
+                    <p class="job-ref">Reference number: <strong>FS001</strong></p>
+                </header>
+
+                <p class="job-summary">
+                    We are looking for a Senior Full-Stack Engineer to lead the development of
+                    next-generation microservices and responsive web platforms using React,
+                    Node.js and Docker for our Cloud Engineering department.
+                </p>
+
+                <section class="job-details">
+                    <h3>Salary and Reporting Line</h3>
+                    <dl>
+                        <dt>Salary</dt>
+                        <dd>USD 7,000 - 10,000 per month, depending on experience</dd>
+                        <dt>Reports to</dt>
+                        <dd>Head of Cloud Engineering</dd>
+                        <dt>Location</dt>
+                        <dd>114 Special Street, Singapore (hybrid)</dd>
+                    </dl>
+                </section>
+
+                <section class="job-responsibilities">
+                    <h3>Key Responsibilities</h3>
+                    <ul>
+                        <li>Design and build microservices and RESTful APIs using Node.js.</li>
+                        <li>Develop responsive, accessible web interfaces with React.</li>
+                        <li>Containerise applications with Docker and support their deployment.</li>
+                        <li>Review code and mentor junior developers.</li>
+                        <li>Work with designers and product owners to turn requirements into features.</li>
+                    </ul>
+                </section>
+
+                <section class="job-requirements">
+                    <h3>Requirements</h3>
+
+                    <h4>Essential</h4>
+                    <ul>
+                        <li>Bachelor's degree in Computer Science, IT or a related field.</li>
+                        <li>5+ years of professional full-stack development experience.</li>
+                        <li>Strong skills in JavaScript (ES6+), React and Node.js.</li>
+                        <li>Hands-on experience with Docker and Git.</li>
+                    </ul>
+
+                    <h4>Preferable</h4>
+                    <ul>
+                        <li>Experience with TypeScript and SQL or NoSQL databases.</li>
+                        <li>Familiarity with CI/CD pipelines and cloud platforms such as AWS.</li>
+                        <li>Experience working in Agile/Scrum teams.</li>
+                    </ul>
+                </section>
+            </article>
+        </section>
+
+        <!-- ================= JOB 2 ================= -->
+        <section id="job-devops" class="job-listing">
+            <article class="job-card content-box">
+                <header class="job-header">
+                    <h2 id="job-title-devops">DevOps &amp; Cloud Architect</h2>
+                    <p class="job-ref">Reference number: <strong>DO017</strong></p>
+                </header>
+
+                <p class="job-summary">
+                    We are seeking a DevOps &amp; Cloud Architect to design automated CI/CD
+                    pipelines, oversee Kubernetes clusters, and optimise the security and
+                    reliability of our cloud infrastructure.
+                </p>
+
+                <section class="job-details">
+                    <h3>Salary and Reporting Line</h3>
+                    <dl>
+                        <dt>Salary</dt>
+                        <dd>USD 8,000 - 11,500 per month, depending on experience</dd>
+                        <dt>Reports to</dt>
+                        <dd>Head of Infrastructure &amp; Security</dd>
+                        <dt>Location</dt>
+                        <dd>114 Special Street, Singapore (on-site / hybrid)</dd>
+                    </dl>
+                </section>
+
+                <section class="job-responsibilities">
+                    <h3>Key Responsibilities</h3>
+                    <ul>
+                        <li>Design and maintain automated CI/CD pipelines for multiple product teams.</li>
+                        <li>Architect and manage cloud infrastructure on AWS using Infrastructure as Code.</li>
+                        <li>Operate and scale Kubernetes clusters.</li>
+                        <li>Monitor system performance, availability and security.</li>
+                        <li>Respond to incidents and lead post-incident reviews.</li>
+                    </ul>
+                </section>
+
+                <section class="job-requirements">
+                    <h3>Requirements</h3>
+
+                    <h4>Essential</h4>
+                    <ul>
+                        <li>Bachelor's degree in Computer Science, IT or a related field.</li>
+                        <li>5+ years of experience in DevOps, cloud or systems engineering roles.</li>
+                        <li>Hands-on experience with Docker, Kubernetes and Linux administration.</li>
+                        <li>Experience with Terraform or similar IaC tools.</li>
+                    </ul>
+
+                    <h4>Preferable</h4>
+                    <ul>
+                        <li>AWS Certified Solutions Architect or DevOps Engineer certification.</li>
+                        <li>Experience with Prometheus, Grafana or similar monitoring tools.</li>
+                        <li>Scripting skills in Python or Bash.</li>
+                    </ul>
+                </section>
+            </article>
+        </section>
+
+        <!-- ================= JOB 3 ================= -->
+        <section id="job-ai-ml" class="job-listing">
+            <article class="job-card content-box">
+                <header class="job-header">
+                    <h2 id="job-title-ai-ml">AI / Machine Learning Engineer</h2>
+                    <p class="job-ref">Reference number: <strong>ML023</strong></p>
+                </header>
+
+                <p class="job-summary">
+                    We are looking for an AI / Machine Learning Engineer to train and deploy
+                    custom LLM applications and automated predictive data pipelines for our
+                    enterprise clients.
+                </p>
+
+                <section class="job-details">
+                    <h3>Salary and Reporting Line</h3>
+                    <dl>
+                        <dt>Salary</dt>
+                        <dd>USD 7,500 - 11,000 per month, depending on experience</dd>
+                        <dt>Reports to</dt>
+                        <dd>Head of Data &amp; AI Innovation</dd>
+                        <dt>Location</dt>
+                        <dd>114 Special Street, Singapore (hybrid)</dd>
+                    </dl>
+                </section>
+
+                <section class="job-responsibilities">
+                    <h3>Key Responsibilities</h3>
+                    <ul>
+                        <li>Fine-tune, evaluate and deploy LLM-based applications for client use cases.</li>
+                        <li>Build and maintain automated data and predictive modelling pipelines.</li>
+                        <li>Collaborate with software engineers to integrate models into production systems.</li>
+                        <li>Monitor model performance and retrain models when needed.</li>
+                        <li>Document experiments and share findings with the wider team.</li>
+                    </ul>
+                </section>
+
+                <section class="job-requirements">
+                    <h3>Requirements</h3>
+
+                    <h4>Essential</h4>
+                    <ul>
+                        <li>Bachelor's or Master's degree in Computer Science, Data Science or a related field.</li>
+                        <li>3+ years of experience in machine learning or applied AI.</li>
+                        <li>Strong Python skills and experience with PyTorch or TensorFlow.</li>
+                        <li>Experience building data pipelines and deploying models.</li>
+                    </ul>
+
+                    <h4>Preferable</h4>
+                    <ul>
+                        <li>Experience with LLM tooling such as Hugging Face or LangChain.</li>
+                        <li>Familiarity with MLOps practices and cloud ML services.</li>
+                        <li>Publications or open-source contributions in AI/ML.</li>
+                    </ul>
+                </section>
+            </article>
+        </section>
+
+        <!-- ================= ASIDE ================= -->
+        <aside id="how-to-apply" class="job-aside content-box">
+            <h2>How to Apply</h2>
+            <ol>
+                <li>Choose the position and note its reference number.</li>
+                <li>Prepare your CV and a short cover letter.</li>
+                <li>Complete the form on our <a href="apply.html">Apply page</a>.</li>
+                <li>Our HR team will contact shortlisted candidates within two weeks.</li>
+            </ol>
+            <p><small>We are an equal opportunity employer.</small></p>
+        </aside>
+
+    </main>
+
+    <footer id="main-footer" class="site-footer">
+        <div id="footer-container" class="footer-layout">
+
+            <!-- Cột 1: Thông tin công ty & Địa chỉ theo đề bài -->
+            <div id="footer-company-info" class="footer-col company-info-col">
+                <h3 id="footer-company-title" class="footer-heading">Pacific Alliances Software Company LTD</h3>
+                <p id="footer-company-address" class="footer-text address-text">
+                    <strong>Address:</strong> 114 Special street, Singapore
+                </p>
+                <p id="footer-company-slogan" class="footer-text slogan-text">
+                    Delivering world-class software engineering and digital transformation solutions.
+                </p>
+            </div>
+
+            <!-- Cột 2: Danh mục liên kết nhanh (Quick links) -->
+            <div id="footer-quick-links" class="footer-col quick-links-col">
+                <h3 class="footer-heading">Navigation</h3>
+                <ul id="footer-nav-list" class="footer-links-list">
+                    <li class="footer-link-item"><a class="footer-nav-link" href="index.html">Home</a></li>
+                    <li class="footer-link-item"><a class="footer-nav-link" href="job.html">Jobs</a></li>
+                    <li class="footer-link-item"><a class="footer-nav-link" href="apply.html">Apply</a></li>
+                    <li class="footer-link-item"><a class="footer-nav-link" href="about.html">About Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Cột 3: Thông tin liên hệ và tuyển dụng (Contacts) -->
+            <div id="footer-contact-info" class="footer-col contacts-col">
+                <h3 class="footer-heading">Contact & HR Dept</h3>
+                <ul id="footer-contact-list" class="footer-contact-items">
+                    <li class="contact-item">
+                        <strong>Recruitment Email:</strong> 
+                        <a class="contact-link" href="mailto:careers@pacificalliances.sg">careers@pacificalliances.sg</a>
+                    </li>
+                    <li class="contact-item">
+                        <strong>General Inquiries:</strong> 
+                        <a class="contact-link" href="mailto:contact@pacificalliances.sg">contact@pacificalliances.sg</a>
+                    </li>
+                    <li class="contact-item">
+                        <strong>Phone Hotline:</strong> 
+                        <a class="contact-link" href="tel:+6561234567">+65 6123 4567</a>
+                    </li>
+                    <li class="contact-item">
+                        <strong>Working Hours:</strong> Mon - Fri, 09:00 AM - 06:00 PM (SGT)
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Cột 4: Mạng xã hội / Thông tin bổ sung -->
+            <div id="footer-social-info" class="footer-col social-col">
+                <h3 class="footer-heading">Connect With Us</h3>
+                <p class="footer-text">Follow our tech blogs and social channels for tech updates and hiring events:</p>
+                <ul id="footer-social-list" class="footer-social-links">
+                    <li class="social-item"><a class="social-link" href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li class="social-item"><a class="social-link" href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li class="social-item"><a class="social-link" href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Dòng bản quyền chân trang -->
+        <div id="footer-copyright" class="footer-bottom-bar">
+            <p id="copyright-notice" class="copyright-text">
+                &copy; 2026 Pacific Alliances Software Company LTD. All rights reserved. | 114 Special street, Singapore.
+            </p>
+        </div>
+    </footer>
+    <!-- ================= KẾT THÚC PHẦN FOOTER ================= -->
+</body>
+</html>
+
