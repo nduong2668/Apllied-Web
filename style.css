@@ -1,20 +1,20 @@
 /* ==========================================================================
-   ASSIGNMENT 1 - PACIFIC ALLIANCES SOFTWARE COMPANY LTD
-   Main Stylesheet: style.css
-   Color Scheme: Fuji purple, Blue-violet, Kikyo-iroiro, Iris, Hanada, Dark blue
+   BÀI TẬP 1 - CÔNG TY TNHH PHẦN MỀM PACIFIC ALLIANCES
+   Tập tin định kiểu chính: style.css
+   Bảng màu: Tím Fuji, Xanh tím, Kikyo-iroiro, Diên vĩ (Iris), Xanh Hanada, Xanh đen đậm (Dark blue)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   1. CSS VARIABLES (BẢNG MÀU THEO WIREFRAME THIẾT KẾ)
+   1. CÁC BIẾN CSS (BẢNG MÀU THEO BẢN VẼ THIẾT KẾ)
    -------------------------------------------------------------------------- */
 :root {
     /* Bảng màu chính thức từ tài liệu thiết kế */
-    --color-fuji-purple:  #9F9BD3; /* Fuji purple (sf18) */
-    --color-blue-violet:  #7165B9; /* Blue-violet (sf20) */
+    --color-fuji-purple:  #9F9BD3; /* Tím Fuji (sf18) */
+    --color-blue-violet:  #7165B9; /* Xanh tím (sf20) */
     --color-kikyo-iroiro: #4D63C2; /* Kikyo-iroiro (D18) */
-    --color-iris:         #8048B8; /* Iris (D20) */
-    --color-hanada:       #387DA4; /* 縹色 / Hanada (D16) */
-    --color-dark-blue:    #293671; /* Dark blue (DK18) */
+    --color-iris:         #8048B8; /* Diên vĩ / Iris (D20) */
+    --color-hanada:       #387DA4; /* Xanh Hanada (D16) */
+    --color-dark-blue:    #293671; /* Xanh đen đậm / Dark blue (DK18) */
 
     /* Màu nền & Văn bản phụ trợ */
     --bg-body:            #F4F7FC; /* Nền trang xám lam dịu nhẹ */
@@ -22,7 +22,7 @@
     --bg-box-tint:        #EDF3FB; /* Nền xanh lam nhạt cho hộp đặc biệt */
     --text-primary:       #1E2442; /* Màu chữ chính (xanh đen đậm) */
     --text-secondary:     #555E7E; /* Màu chữ phụ / mô tả */
-    --text-light:         #8D95B5; /* Màu chữ mờ / metadata */
+    --text-light:         #8D95B5; /* Màu chữ mờ / thông tin phụ */
     --border-light:       #D8E0F0; /* Viền mỏng của hộp */
     --border-accent:      #BAC9EB; /* Viền nhấn mạnh */
 
@@ -40,7 +40,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   2. RESET CƠ BẢN & TYPOGRAPHY
+   2. THIẾT LẬP LẠI MẶC ĐỊNH & KIỂU CHỮ (TYPOGRAPHY)
    -------------------------------------------------------------------------- */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -84,8 +84,8 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   3. HEADER & NAVBAR (DÙNG CHUNG CHO CẢ 4 TRANG)
-   Bố cục: Company Name (trái) - 4 Box Menu (giữa) - Logo (phải)
+   3. ĐẦU TRANG & THANH ĐIỀU HƯỚNG (DÙNG CHUNG CHO CẢ 4 TRANG)
+   Bố cục: Tên công ty (trái) - Menu 4 hộp (giữa) - Logo (phải)
    -------------------------------------------------------------------------- */
 .site-header {
     background-color: var(--bg-surface);
@@ -107,7 +107,7 @@ img {
     gap: 20px;
 }
 
-/* Tên công ty / Branding */
+/* Tên công ty / Thương hiệu */
 .branding-box {
     flex: 1;
     min-width: 250px;
@@ -128,7 +128,7 @@ img {
     margin-top: 3px;
 }
 
-/* Thanh điều hướng 4 Box theo đúng ghi chú wireframe: "Header menu (4 box lead to 4 pages)" */
+/* Thanh điều hướng 4 hộp theo đúng bản vẽ: "Menu đầu trang (4 hộp dẫn đến 4 trang)" */
 .site-navbar {
     display: flex;
     justify-content: center;
@@ -144,7 +144,7 @@ img {
     display: inline-block;
 }
 
-/* Định dạng từng Box menu */
+/* Định dạng từng hộp menu */
 .navbar-link {
     display: inline-block;
     padding: 10px 22px;
@@ -158,7 +158,7 @@ img {
     text-align: center;
 }
 
-/* Hiệu ứng khi hover vào hộp menu */
+/* Hiệu ứng khi rê chuột vào hộp menu */
 .navbar-link:hover {
     background-color: var(--color-fuji-purple);
     color: #FFFFFF;
@@ -194,7 +194,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   4. LAYOUT CHUNG & NỘI DUNG CHÍNH (MAIN CONTENT)
+   4. BỐ CỤC CHUNG & NỘI DUNG CHÍNH CỦA TRANG
    -------------------------------------------------------------------------- */
 .content-wrapper {
     flex: 1;
@@ -238,7 +238,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   5. KHỐI HỘP ĐẶC TRƯNG ("Box content should be in boxes like these")
+   5. CÁC KHỐI HỘP ĐẶC TRƯNG (Nội dung được đặt trong các hộp theo bản vẽ)
    -------------------------------------------------------------------------- */
 .content-box {
     background-color: var(--bg-surface);
@@ -258,7 +258,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   6. 1. HERO BANNER
+   6. BANNER NỔI BẬT ĐẦU TRANG (HERO BANNER)
    -------------------------------------------------------------------------- */
 .hero-banner {
     background: linear-gradient(135deg, var(--color-dark-blue) 0%, var(--color-blue-violet) 70%, var(--color-iris) 100%);
@@ -313,7 +313,7 @@ img {
     flex-wrap: wrap;
 }
 
-/* Nút bấm (Button Components) */
+/* Các nút bấm hành động */
 .action-btn {
     display: inline-flex;
     align-items: center;
@@ -353,7 +353,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   7. 2. OVERVIEW / WHO WE ARE SECTION
+   7. PHẦN GIỚI THIỆU TỔNG QUAN VỀ CÔNG TY (CHÚNG TÔI LÀ AI)
    -------------------------------------------------------------------------- */
 .overview-section {
     margin-bottom: 56px;
@@ -384,7 +384,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   8. 3. PERKS & BENEFITS (WHY JOIN US - LƯỚI BOX)
+   8. PHÚC LỢI & ĐÃI NGỘ (LÝ DO GIA NHẬP - DẠNG LƯỚI HỘP)
    -------------------------------------------------------------------------- */
 .perks-section {
     margin-bottom: 56px;
@@ -422,7 +422,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   9. 4. HOT OPENINGS (FEATURED JOBS)
+   9. CÁC VỊ TRÍ VIỆC LÀM NỔI BẬT (XEM TRƯỚC CÔNG VIỆC)
    -------------------------------------------------------------------------- */
 .featured-jobs-container {
     margin-bottom: 56px;
@@ -517,7 +517,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   10. 5. APPLICATION PROCESS STEPS
+   10. CÁC BƯỚC TRONG QUY TRÌNH ỨNG TUYỂN
    -------------------------------------------------------------------------- */
 .recruitment-process-section {
     margin-bottom: 56px;
@@ -570,7 +570,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   11. 6. CALL TO ACTION (CTA BANNER BOX)
+   11. KHỐI KÊU GỌI HÀNH ĐỘNG (HỘP BANNER CTA)
    -------------------------------------------------------------------------- */
 .cta-banner-section {
     margin-bottom: 20px;
@@ -625,7 +625,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   12. FOOTER (THEO WIREFRAME: "Footer - General information - contacts - etc")
+   12. CHÂN TRANG (THEO BẢN VẼ: "Chân trang - Thông tin chung - Liên hệ - v.v.")
    -------------------------------------------------------------------------- */
 .site-footer {
     background-color: var(--color-dark-blue);
@@ -685,7 +685,7 @@ img {
     color: var(--color-fuji-purple);
 }
 
-/* Quick links list */
+/* Danh sách liên kết nhanh */
 .footer-links-list,
 .footer-contact-items,
 .footer-social-links {
@@ -706,7 +706,7 @@ img {
     transform: translateX(4px);
 }
 
-/* Contacts column */
+/* Cột thông tin liên hệ */
 .contact-item {
     font-size: 0.9rem;
     color: #CCD5EE;
@@ -728,7 +728,7 @@ img {
     text-decoration: underline;
 }
 
-/* Social media links */
+/* Các liên kết mạng xã hội */
 .social-link {
     display: inline-flex;
     align-items: center;
@@ -746,7 +746,7 @@ img {
     color: #FFFFFF;
 }
 
-/* Copyright bottom bar */
+/* Thanh thông tin bản quyền dưới cùng */
 .footer-bottom-bar {
     border-top: 1px solid rgba(255, 255, 255, 0.12);
     padding: 20px 24px;
@@ -760,10 +760,10 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   13. RESPONSIVE DESIGN (TABLET & MOBILE)
+   13. THIẾT KẾ ĐÁP ỨNG ĐA THIẾT BỊ (TABLET & ĐIỆN THOẠI DI ĐỘNG)
    -------------------------------------------------------------------------- */
 
-/* Tablet (dưới 1024px) */
+/* Màn hình máy tính bảng (dưới 1024px) */
 @media (max-width: 1024px) {
     .header-container {
         flex-wrap: wrap;
@@ -793,7 +793,7 @@ img {
     }
 }
 
-/* Mobile (dưới 768px) */
+/* Màn hình điện thoại di động (dưới 768px) */
 @media (max-width: 768px) {
     .header-container {
         flex-direction: column;
@@ -876,9 +876,8 @@ img {
     }
 }
 
-
 /* --------------------------------------------------------------------------
-   14. FORM STYLING (JOB APPLICATION FORM - APPLY.HTML)
+   14. ĐỊNH KIỂU FORM ỨNG TUYỂN (MẪU ĐƠN ỨNG TUYỂN - APPLY.HTML)
    -------------------------------------------------------------------------- */
 .form-card-box {
     max-width: 860px;
