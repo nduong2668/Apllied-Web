@@ -1,13 +1,13 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    // Sử dụng IntelliSense để xem các thuộc tính có thể sử dụng.
+    // Rê chuột để xem mô tả chi tiết của các thuộc tính hiện có.
+    // Để biết thêm thông tin, truy cập: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
             "type": "editor-browser",
             "request": "launch",
-            "name": "Open job.html",
+            "name": "Mở trang job.html",
             "url": "file:///c%3A/Users/Admin/Downloads/job.html"
         }
     ]
