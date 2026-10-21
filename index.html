@@ -6,26 +6,26 @@
     <meta name="description" content="Pacific Alliances Software Company LTD - Career and Recruitment Portal. Explore software engineering and tech job opportunities in Singapore.">
     <meta name="author" content="Pacific Alliances Software Company LTD">
     <title>Home - Pacific Alliances Software Company LTD</title>
-    <!-- Tập tin CSS dùng chung cho toàn bộ website -->
+    <!-- Shared external stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body id="page-home" class="home-page">
 
     <!-- ================================================================= -->
-    <!-- PHẦN ĐẦU TRANG & THANH ĐIỀU HƯỚNG (DÙNG CHUNG CHO TẤT CẢ 4 TRANG) -->
-    <!-- Sao chép nguyên khối <header> này qua các trang:                  -->
-    <!-- job.html, apply.html, about.html và đổi class "active" tương ứng   -->
+    <!-- SHARED HEADER & NAVBAR (COMMON TO ALL 4 PAGES)                     -->
+    <!-- Copy this <header> block across job.html, apply.html, about.html   -->
+    <!-- and update class="active" on the corresponding page link           -->
     <!-- ================================================================= -->
     <header id="main-header" class="site-header">
         <div id="header-container" class="header-container">
             
-            <!-- Tên công ty / Thương hiệu (Bên trái) -->
+            <!-- Company Branding (Left) -->
             <div id="company-branding" class="branding-box">
                 <h1 id="site-title" class="company-name">Pacific Alliances Software Company LTD</h1>
                 <p id="site-tagline" class="company-tagline">Empowering Innovation, Engineering Excellence</p>
             </div>
 
-            <!-- Thanh điều hướng 4 trang (Ở giữa hoặc bên dưới tùy bố cục màn hình) -->
+            <!-- 4-Box Navigation Menu -->
             <nav id="main-navbar" class="site-navbar" aria-label="Main Navigation">
                 <ul id="navbar-menu" class="navbar-list">
                     <li class="navbar-item">
@@ -43,7 +43,7 @@
                 </ul>
             </nav>
 
-            <!-- Logo công ty (Bên phải - Tùy chọn theo bản vẽ thiết kế) -->
+            <!-- Company Logo (Right - Optional as per design wireframe) -->
             <div id="header-logo-container" class="logo-box">
                 <a href="index.html" class="logo-link">
                     <img id="company-logo" class="site-logo" src="images/logo.svg" alt="Pacific Alliances Software Company LTD Logo">
@@ -52,15 +52,15 @@
 
         </div>
     </header>
-    <!-- ================= KẾT THÚC PHẦN ĐẦU TRANG & THANH ĐIỀU HƯỚNG ================= -->
+    <!-- ================= END SHARED HEADER & NAVBAR ================= -->
 
 
     <!-- ================================================================= -->
-    <!-- NỘI DUNG CHÍNH TRANG CHỦ                                          -->
+    <!-- MAIN HOMEPAGE CONTENT                                             -->
     <!-- ================================================================= -->
     <main id="main-content" class="content-wrapper">
 
-        <!-- 1. Banner giới thiệu tuyển dụng (Hero Banner) -->
+        <!-- 1. Hero Recruitment Banner -->
         <section id="hero-section" class="hero-banner">
             <div id="hero-container" class="hero-content">
                 <h2 id="hero-heading" class="hero-title">Build Your Future With Pacific Alliances</h2>
@@ -74,7 +74,7 @@
             </div>
         </section>
 
-        <!-- 2. Giới thiệu tổng quan về công ty (Dạng khối hộp) -->
+        <!-- 2. Company Overview (Who We Are - Box Cards) -->
         <section id="intro-section" class="overview-section">
             <header class="section-header">
                 <h2 id="intro-heading" class="section-title">Who We Are</h2>
@@ -105,14 +105,14 @@
             </div>
         </section>
 
-        <!-- 3. Lý do nên gia nhập công ty (Các khối hộp phúc lợi theo thiết kế) -->
+        <!-- 3. Why Join Us (Perks & Benefits Boxes) -->
         <section id="benefits-section" class="perks-section">
             <header class="section-header">
                 <h2 id="benefits-heading" class="section-title">Why Join Pacific Alliances?</h2>
                 <p id="benefits-subheading" class="section-subtitle">Great perks, modern technology, and limitless potential</p>
             </header>
 
-            <!-- Khối chứa các hộp nội dung (Nội dung được chia thành từng hộp theo bản vẽ) -->
+            <!-- Box Content Container ("Box content should be in boxes like these") -->
             <div id="perks-boxes-grid" class="boxes-grid-container">
 
                 <div id="perk-box-compensation" class="content-box perk-item">
@@ -166,7 +166,7 @@
             </div>
         </section>
 
-        <!-- 4. Vị trí việc làm nổi bật (Dẫn tới trang job.html) -->
+        <!-- 4. Featured Job Openings (Links to job.html) -->
         <section id="featured-jobs-section" class="featured-jobs-container">
             <header class="section-header">
                 <h2 id="featured-jobs-heading" class="section-title">Hot Openings</h2>
@@ -215,7 +215,7 @@
             </div>
         </section>
 
-        <!-- 5. Quy trình ứng tuyển (Các bước tuyển dụng) -->
+        <!-- 5. 4-Step Hiring Process -->
         <section id="process-section" class="recruitment-process-section">
             <header class="section-header">
                 <h2 id="process-heading" class="section-title">Our 4-Step Hiring Process</h2>
@@ -251,7 +251,7 @@
             </div>
         </section>
 
-        <!-- 6. Kêu gọi hành động (Khối hộp CTA) -->
+        <!-- 6. Call To Action (CTA Banner Box) -->
         <section id="cta-section" class="cta-banner-section">
             <div id="cta-box-container" class="content-box cta-card-box">
                 <h2 id="cta-heading" class="cta-title">Ready To Shape The Future Of Technology?</h2>
@@ -266,17 +266,17 @@
         </section>
 
     </main>
-    <!-- ================= KẾT THÚC NỘI DUNG CHÍNH ================= -->
+    <!-- ================= END MAIN CONTENT ================= -->
 
 
     <!-- ================================================================= -->
-    <!-- PHẦN CHÂN TRANG (DÙNG CHUNG CHO TẤT CẢ CÁC TRANG)                 -->
-    <!-- Theo thiết kế: Chân trang - Thông tin chung - Liên hệ - v.v.      -->
+    <!-- SHARED FOOTER (COMMON TO ALL 4 PAGES)                             -->
+    <!-- As per wireframe: Footer - General information - contacts - etc    -->
     <!-- ================================================================= -->
     <footer id="main-footer" class="site-footer">
         <div id="footer-container" class="footer-layout">
 
-            <!-- Cột 1: Thông tin công ty & Địa chỉ theo đề bài -->
+            <!-- Column 1: Company Information & Singapore Address -->
             <div id="footer-company-info" class="footer-col company-info-col">
                 <h3 id="footer-company-title" class="footer-heading">Pacific Alliances Software Company LTD</h3>
                 <p id="footer-company-address" class="footer-text address-text">
@@ -287,7 +287,7 @@
                 </p>
             </div>
 
-            <!-- Cột 2: Danh mục liên kết nhanh -->
+            <!-- Column 2: Quick Navigation Links -->
             <div id="footer-quick-links" class="footer-col quick-links-col">
                 <h3 class="footer-heading">Navigation</h3>
                 <ul id="footer-nav-list" class="footer-links-list">
@@ -298,7 +298,7 @@
                 </ul>
             </div>
 
-            <!-- Cột 3: Thông tin liên hệ và phòng nhân sự -->
+            <!-- Column 3: Contact & HR Department -->
             <div id="footer-contact-info" class="footer-col contacts-col">
                 <h3 class="footer-heading">Contact & HR Dept</h3>
                 <ul id="footer-contact-list" class="footer-contact-items">
@@ -320,7 +320,7 @@
                 </ul>
             </div>
 
-            <!-- Cột 4: Mạng xã hội và thông tin bổ sung -->
+            <!-- Column 4: Social Media Channels -->
             <div id="footer-social-info" class="footer-col social-col">
                 <h3 class="footer-heading">Connect With Us</h3>
                 <p class="footer-text">Follow our tech blogs and social channels for tech updates and hiring events:</p>
@@ -333,14 +333,14 @@
 
         </div>
 
-        <!-- Dòng thông tin bản quyền chân trang -->
+        <!-- Bottom Copyright Bar -->
         <div id="footer-copyright" class="footer-bottom-bar">
             <p id="copyright-notice" class="copyright-text">
                 &copy; 2026 Pacific Alliances Software Company LTD. All rights reserved. | 114 Special street, Singapore.
             </p>
         </div>
     </footer>
-    <!-- ================= KẾT THÚC PHẦN CHÂN TRANG ================= -->
+    <!-- ================= END FOOTER ================= -->
 
 </body>
 </html>

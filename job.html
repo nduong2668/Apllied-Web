@@ -6,12 +6,12 @@
     <meta name="description" content="Pacific Alliances Software Company LTD - Job Application Form. Submit your application for open software engineering positions.">
     <meta name="author" content="Pacific Alliances Software Company LTD">
     <title>Job Position Descriptions - Pacific Alliances Software Company LTD</title>
-    <!-- File CSS dùng chung cho toàn bộ website -->
+    <!-- Shared external stylesheet -->
     <link rel="stylesheet" href="style.css">
     <style>
-        /* ===== STYLE RIÊNG CHO TRANG JOBS (dùng chung bảng màu với style.css) ===== */
+        /* ===== JOB POSITION PAGE STYLING ===== */
 
-        /* Nút Jobs ở navbar khi đang ở trang này */
+        /* Active Navigation Link for Jobs page */
         .site-navbar #nav-link-jobs.active,
         .site-navbar #nav-link-jobs.active:hover,
         .site-navbar #nav-link-jobs[aria-current="page"] {
@@ -20,7 +20,7 @@
             border-color: var(--color-dark-blue);
         }
 
-        /* Phần giới thiệu đầu trang */
+        /* Page Introduction Section */
         .jobs-intro {
             text-align: center;
             margin-bottom: 34px;
@@ -38,7 +38,7 @@
             font-size: 1.05rem;
         }
 
-        /* Thẻ từng vị trí tuyển dụng */
+        /* Job Listing Cards */
         .job-listing {
             margin-bottom: 28px;
         }
@@ -78,7 +78,7 @@
             margin-bottom: 8px;
         }
 
-        /* Tiêu đề phụ trong mỗi job */
+        /* Subheadings within Job Cards */
         .job-card h3 {
             font-size: 1.15rem;
             font-weight: 700;
@@ -92,7 +92,7 @@
             margin: 14px 0 6px;
         }
 
-        /* Lương / người báo cáo / địa điểm */
+        /* Salary, Reporting Line, and Location details */
         .job-card dl {
             display: grid;
             grid-template-columns: 140px 1fr;
@@ -110,7 +110,7 @@
             color: var(--text-secondary);
         }
 
-        /* Danh sách (khôi phục bullet vì style.css đang reset list-style) */
+        /* Lists (re-enable bullets reset by global style.css) */
         .job-card ul,
         .job-aside ol {
             padding-left: 22px;
@@ -133,7 +133,7 @@
             font-weight: 700;
         }
 
-        /* Khối phụ aside "Hướng dẫn ứng tuyển" */
+        /* Aside Block: How to Apply */
         .job-aside {
             background: linear-gradient(135deg, var(--bg-box-tint) 0%, #FFFFFF 100%);
             border: 2px solid var(--color-fuji-purple);
@@ -165,18 +165,18 @@
     </style>
 </head>
 
-<!-- ================= HEADER & NAVBAR CHUNG ================= -->
+<!-- ================= SHARED HEADER & NAVBAR ================= -->
 <body id="page-jobs" class="page-jobs">
 <header id="main-header" class="site-header">
     <div id="header-container" class="header-container">
         
-        <!-- Tên công ty / Thương hiệu (Bên trái) -->
+        <!-- Company Branding (Left) -->
         <div id="company-branding" class="branding-box">
             <h1 id="site-title" class="company-name">Pacific Alliances Software Company LTD</h1>
             <p id="site-tagline" class="company-tagline">Empowering Innovation, Engineering Excellence</p>
         </div>
 
-        <!-- Thanh menu điều hướng 4 trang -->
+        <!-- 4-Box Navigation Menu -->
         <nav id="main-navbar" class="site-navbar" aria-label="Main Navigation">
             <ul id="navbar-menu" class="navbar-list">
                 <li class="navbar-item">
@@ -194,7 +194,7 @@
             </ul>
         </nav>
 
-        <!-- Logo công ty (Bên phải - Tùy chọn theo bản vẽ) -->
+        <!-- Company Logo (Right - Optional as per design wireframe) -->
         <div id="header-logo-container" class="logo-box">
             <a href="index.html" class="logo-link">
                 <img id="company-logo" class="site-logo" src="images/logo.svg" alt="Pacific Alliances Software Company LTD Logo">
@@ -203,10 +203,10 @@
 
     </div>
 </header>
-<!-- ======================================================== -->
+<!-- ================= END SHARED HEADER & NAVBAR ================= -->
     <main id="main-content" class="content-wrapper">
 
-        <!-- Phần giới thiệu trang việc làm -->
+        <!-- Page Introduction Section -->
         <section id="jobs-intro-section" class="jobs-intro">
             <h2 id="jobs-page-title">Job Postitions Available</h2>
             <p>
@@ -216,7 +216,7 @@
             </p>
         </section>
 
- <!-- ================= VỊ TRÍ 1: KỸ SƯ FULL-STACK CAO CẤP ================= -->
+ <!-- ================= JOB POSITION 1: SENIOR FULL-STACK ENGINEER ================= -->
         <section id="job-fullstack" class="job-listing">
             <article class="job-card content-box">
                 <header class="job-header">
@@ -274,7 +274,7 @@
             </article>
         </section>
 
-        <!-- ================= VỊ TRÍ 2: KIẾN TRÚC SƯ DEVOPS & ĐÁM MÂY ================= -->
+        <!-- ================= JOB POSITION 2: DEVOPS & CLOUD ARCHITECT ================= -->
         <section id="job-devops" class="job-listing">
             <article class="job-card content-box">
                 <header class="job-header">
@@ -332,7 +332,7 @@
             </article>
         </section>
 
-        <!-- ================= VỊ TRÍ 3: KỸ SƯ TRÍ TUỆ NHÂN TẠO & HỌC MÁY (AI/ML) ================= -->
+        <!-- ================= JOB POSITION 3: AI / MACHINE LEARNING ENGINEER ================= -->
         <section id="job-ai-ml" class="job-listing">
             <article class="job-card content-box">
                 <header class="job-header">
@@ -390,7 +390,7 @@
             </article>
         </section>
 
-        <!-- ================= KHỐI PHỤ (ASIDE): QUY TRÌNH ỨNG TUYỂN ================= -->
+        <!-- ================= ASIDE: APPLICATION GUIDELINES ================= -->
         <aside id="how-to-apply" class="job-aside content-box">
             <h2>How to Apply</h2>
             <ol>
@@ -407,7 +407,7 @@
     <footer id="main-footer" class="site-footer">
         <div id="footer-container" class="footer-layout">
 
-            <!-- Cột 1: Thông tin công ty & Địa chỉ theo đề bài -->
+            <!-- Column 1: Company Information & Singapore Address -->
             <div id="footer-company-info" class="footer-col company-info-col">
                 <h3 id="footer-company-title" class="footer-heading">Pacific Alliances Software Company LTD</h3>
                 <p id="footer-company-address" class="footer-text address-text">
@@ -418,7 +418,7 @@
                 </p>
             </div>
 
-            <!-- Cột 2: Danh mục liên kết nhanh -->
+            <!-- Column 2: Quick Navigation Links -->
             <div id="footer-quick-links" class="footer-col quick-links-col">
                 <h3 class="footer-heading">Navigation</h3>
                 <ul id="footer-nav-list" class="footer-links-list">
@@ -429,7 +429,7 @@
                 </ul>
             </div>
 
-            <!-- Cột 3: Thông tin liên hệ và phòng nhân sự -->
+            <!-- Column 3: Contact & HR Department -->
             <div id="footer-contact-info" class="footer-col contacts-col">
                 <h3 class="footer-heading">Contact & HR Dept</h3>
                 <ul id="footer-contact-list" class="footer-contact-items">
@@ -451,7 +451,7 @@
                 </ul>
             </div>
 
-            <!-- Cột 4: Mạng xã hội và thông tin bổ sung -->
+            <!-- Column 4: Social Media Channels -->
             <div id="footer-social-info" class="footer-col social-col">
                 <h3 class="footer-heading">Connect With Us</h3>
                 <p class="footer-text">Follow our tech blogs and social channels for tech updates and hiring events:</p>
@@ -464,14 +464,14 @@
 
         </div>
 
-        <!-- Dòng thông tin bản quyền chân trang -->
+        <!-- Bottom Copyright Bar -->
         <div id="footer-copyright" class="footer-bottom-bar">
             <p id="copyright-notice" class="copyright-text">
                 &copy; 2026 Pacific Alliances Software Company LTD. All rights reserved. | 114 Special street, Singapore.
             </p>
         </div>
     </footer>
-    <!-- ================= KẾT THÚC PHẦN CHÂN TRANG ================= -->
+    <!-- ================= END FOOTER ================= -->
 </body>
 </html>
 
