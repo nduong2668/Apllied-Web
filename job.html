@@ -6,12 +6,12 @@
     <meta name="description" content="Pacific Alliances Software Company LTD - Job Application Form. Submit your application for open software engineering positions.">
     <meta name="author" content="Pacific Alliances Software Company LTD">
     <title>Job Position Descriptions - Pacific Alliances Software Company LTD</title>
-    <!-- File CSS dùng chung cho toàn bộ website -->
+    <!-- General CSS -->
     <link rel="stylesheet" href="style.css">
     <style>
-        /* ===== STYLE RIÊNG CHO TRANG JOBS (dùng chung bảng màu với style.css) ===== */
+        /* ===== Job CSS ===== */
 
-        /* Nút Jobs ở navbar khi đang ở trang này */
+        /* Jobs navibar */
         .site-navbar #nav-link-jobs.active,
         .site-navbar #nav-link-jobs.active:hover,
         .site-navbar #nav-link-jobs[aria-current="page"] {
@@ -20,7 +20,7 @@
             border-color: var(--color-dark-blue);
         }
 
-        /* Phần giới thiệu đầu trang */
+        /* introduction */
         .jobs-intro {
             text-align: center;
             margin-bottom: 34px;
@@ -38,7 +38,7 @@
             font-size: 1.05rem;
         }
 
-        /* Thẻ từng vị trí tuyển dụng */
+        /* recruitment tabs */
         .job-listing {
             margin-bottom: 28px;
         }
@@ -78,7 +78,7 @@
             margin-bottom: 8px;
         }
 
-        /* Tiêu đề phụ trong mỗi job */
+        /* subheading */
         .job-card h3 {
             font-size: 1.15rem;
             font-weight: 700;
@@ -92,7 +92,7 @@
             margin: 14px 0 6px;
         }
 
-        /* Lương / người báo cáo / địa điểm */
+        /* salary/report/place */
         .job-card dl {
             display: grid;
             grid-template-columns: 140px 1fr;
@@ -110,7 +110,7 @@
             color: var(--text-secondary);
         }
 
-        /* Danh sách (khôi phục bullet vì style.css đang reset list-style) */
+        /* List */
         .job-card ul,
         .job-aside ol {
             padding-left: 22px;
@@ -133,7 +133,7 @@
             font-weight: 700;
         }
 
-        /* Khối aside "How to Apply" */
+        /* aside "How to Apply" */
         .job-aside {
             background: linear-gradient(135deg, var(--bg-box-tint) 0%, #FFFFFF 100%);
             border: 2px solid var(--color-fuji-purple);
@@ -165,18 +165,18 @@
     </style>
 </head>
 
-<!-- ================= HEADER & NAVBAR CHUNG ================= -->
+<!-- ================= SHARED HEADER & NAVBAR  ================= -->
 <body id="page-jobs" class="page-jobs">
 <header id="main-header" class="site-header">
     <div id="header-container" class="header-container">
         
-        <!-- Tên công ty / Thương hiệu (Bên trái) -->
+        <!-- Brand name (Bên trái) -->
         <div id="company-branding" class="branding-box">
             <h1 id="site-title" class="company-name">Pacific Alliances Software Company LTD</h1>
             <p id="site-tagline" class="company-tagline">Empowering Innovation, Engineering Excellence</p>
         </div>
 
-        <!-- Thanh menu điều hướng 4 trang -->
+        <!-- Menu navigation on 4 pages -->
         <nav id="main-navbar" class="site-navbar" aria-label="Main Navigation">
             <ul id="navbar-menu" class="navbar-list">
                 <li class="navbar-item">
@@ -194,7 +194,7 @@
             </ul>
         </nav>
 
-        <!-- Logo công ty (Bên phải - Tuỳ chọn theo bản vẽ) -->
+        <!-- Company's Logo -->
         <div id="header-logo-container" class="logo-box">
             <a href="index.html" class="logo-link">
                 <img id="company-logo" class="site-logo" src="images/logo.svg" alt="Pacific Alliances Software Company LTD Logo">
@@ -407,7 +407,7 @@
     <footer id="main-footer" class="site-footer">
         <div id="footer-container" class="footer-layout">
 
-            <!-- Cột 1: Thông tin công ty & Địa chỉ theo đề bài -->
+            <!-- Company info and address -->
             <div id="footer-company-info" class="footer-col company-info-col">
                 <h3 id="footer-company-title" class="footer-heading">Pacific Alliances Software Company LTD</h3>
                 <p id="footer-company-address" class="footer-text address-text">
@@ -418,7 +418,7 @@
                 </p>
             </div>
 
-            <!-- Cột 2: Danh mục liên kết nhanh (Quick links) -->
+            <!--Quick links -->
             <div id="footer-quick-links" class="footer-col quick-links-col">
                 <h3 class="footer-heading">Navigation</h3>
                 <ul id="footer-nav-list" class="footer-links-list">
@@ -429,7 +429,7 @@
                 </ul>
             </div>
 
-            <!-- Cột 3: Thông tin liên hệ và tuyển dụng (Contacts) -->
+            <!-- (Contacts) -->
             <div id="footer-contact-info" class="footer-col contacts-col">
                 <h3 class="footer-heading">Contact & HR Dept</h3>
                 <ul id="footer-contact-list" class="footer-contact-items">
@@ -451,7 +451,7 @@
                 </ul>
             </div>
 
-            <!-- Cột 4: Mạng xã hội / Thông tin bổ sung -->
+            <!-- Social + Additional info -->
             <div id="footer-social-info" class="footer-col social-col">
                 <h3 class="footer-heading">Connect With Us</h3>
                 <p class="footer-text">Follow our tech blogs and social channels for tech updates and hiring events:</p>
@@ -464,14 +464,14 @@
 
         </div>
 
-        <!-- Dòng bản quyền chân trang -->
+        <!-- Copyright -->
         <div id="footer-copyright" class="footer-bottom-bar">
             <p id="copyright-notice" class="copyright-text">
                 &copy; 2026 Pacific Alliances Software Company LTD. All rights reserved. | 114 Special street, Singapore.
             </p>
         </div>
     </footer>
-    <!-- ================= KẾT THÚC PHẦN FOOTER ================= -->
+    <!-- ================= FOOTER ================= -->
 </body>
 </html>
 
