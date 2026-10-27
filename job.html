@@ -1,409 +1,272 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pacific Alliances Software Company LTD - Job Application Form. Submit your application for open software engineering positions.">
+    <meta name="description" content="Pacific Alliances Software Company LTD - Job Position Descriptions. Explore available software engineering roles in Singapore.">
     <meta name="author" content="Pacific Alliances Software Company LTD">
     <title>Job Position Descriptions - Pacific Alliances Software Company LTD</title>
-    <!-- Shared external stylesheet -->
+    <!-- Shared external stylesheet (Chỉ dùng duy nhất file style.css chung) -->
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* ===== JOB POSITION PAGE STYLING ===== */
-
-        /* Active Navigation Link for Jobs page */
-        .site-navbar #nav-link-jobs.active,
-        .site-navbar #nav-link-jobs.active:hover,
-        .site-navbar #nav-link-jobs[aria-current="page"] {
-            background: linear-gradient(135deg, var(--color-blue-violet) 0%, var(--color-dark-blue) 100%);
-            color: #FFFFFF;
-            border-color: var(--color-dark-blue);
-        }
-
-        /* Page Introduction Section */
-        .jobs-intro {
-            text-align: center;
-            margin-bottom: 34px;
-        }
-        .jobs-intro h2 {
-            font-size: 1.95rem;
-            font-weight: 800;
-            color: var(--color-dark-blue);
-            margin-bottom: 10px;
-        }
-        .jobs-intro p {
-            color: var(--text-secondary);
-            max-width: 760px;
-            margin: 0 auto;
-            font-size: 1.05rem;
-        }
-
-        /* Job Listing Cards */
-        .job-listing {
-            margin-bottom: 28px;
-        }
-        .job-card {
-            padding: 32px 30px;
-        }
-        .job-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
-            padding-bottom: 14px;
-            margin-bottom: 16px;
-            border-bottom: 2px solid var(--border-light);
-        }
-        .job-header h2 {
-            font-size: 1.6rem;
-            font-weight: 800;
-            color: var(--color-dark-blue);
-        }
-        .job-ref {
-            background-color: var(--bg-box-tint);
-            color: var(--color-kikyo-iroiro);
-            border: 1px solid var(--border-light);
-            padding: 5px 14px;
-            border-radius: var(--radius-full);
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-        .job-ref strong {
-            color: var(--color-dark-blue);
-            letter-spacing: 0.04em;
-        }
-        .job-summary {
-            color: var(--text-secondary);
-            margin-bottom: 8px;
-        }
-
-        /* Subheadings within Job Cards */
-        .job-card h3 {
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: var(--color-hanada);
-            margin: 22px 0 10px;
-        }
-        .job-card h4 {
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--color-kikyo-iroiro);
-            margin: 14px 0 6px;
-        }
-
-        /* Salary, Reporting Line, and Location details */
-        .job-card dl {
-            display: grid;
-            grid-template-columns: 140px 1fr;
-            gap: 8px 16px;
-            background-color: var(--bg-box-tint);
-            border-left: 5px solid var(--color-kikyo-iroiro);
-            border-radius: var(--radius-md);
-            padding: 16px 20px;
-        }
-        .job-card dt {
-            font-weight: 700;
-            color: var(--color-dark-blue);
-        }
-        .job-card dd {
-            color: var(--text-secondary);
-        }
-
-        /* Lists (re-enable bullets reset by global style.css) */
-        .job-card ul,
-        .job-aside ol {
-            padding-left: 22px;
-            color: var(--text-secondary);
-        }
-        .job-card ul {
-            list-style: disc;
-        }
-        .job-aside ol {
-            list-style: decimal;
-        }
-        .job-card li,
-        .job-aside li {
-            margin-bottom: 7px;
-            line-height: 1.55;
-        }
-        .job-card li::marker,
-        .job-aside li::marker {
-            color: var(--color-kikyo-iroiro);
-            font-weight: 700;
-        }
-
-        /* Aside Block: How to Apply */
-        .job-aside {
-            background: linear-gradient(135deg, var(--bg-box-tint) 0%, #FFFFFF 100%);
-            border: 2px solid var(--color-fuji-purple);
-            padding: 28px 30px;
-        }
-        .job-aside h2 {
-            font-size: 1.4rem;
-            font-weight: 800;
-            color: var(--color-dark-blue);
-            margin-bottom: 12px;
-        }
-        .job-aside a {
-            font-weight: 600;
-            text-decoration: underline;
-        }
-        .job-aside small {
-            color: var(--text-light);
-        }
-
-        @media (max-width: 768px) {
-            .job-card dl {
-                grid-template-columns: 1fr;
-                gap: 2px;
-            }
-            .job-card dd {
-                margin-bottom: 8px;
-            }
-        }
-    </style>
 </head>
+<body id="page-jobs" class="jobs-page page-jobs">
 
-<!-- ================= SHARED HEADER & NAVBAR ================= -->
-<body id="page-jobs" class="page-jobs">
-<header id="main-header" class="site-header">
-    <div id="header-container" class="header-container">
-        
-        <!-- Company Branding (Left) -->
-        <div id="company-branding" class="branding-box">
-            <h1 id="site-title" class="company-name">Pacific Alliances Software Company LTD</h1>
-            <p id="site-tagline" class="company-tagline">Empowering Innovation, Engineering Excellence</p>
+    <!-- ================================================================= -->
+    <!-- SHARED HEADER & NAVBAR (COMMON TO ALL 4 PAGES)                     -->
+    <!-- ================================================================= -->
+    <header id="main-header" class="site-header">
+        <div id="header-container" class="header-container">
+            
+            <!-- Company Branding (Left) -->
+            <div id="company-branding" class="branding-box">
+                <h1 id="site-title" class="company-name">Pacific Alliances Software Company LTD</h1>
+                <p id="site-tagline" class="company-tagline">Empowering Innovation, Engineering Excellence</p>
+            </div>
+
+            <!-- 4-Box Navigation Menu -->
+            <nav id="main-navbar" class="site-navbar" aria-label="Main Navigation">
+                <ul id="navbar-menu" class="navbar-list">
+                    <li class="navbar-item">
+                        <a id="nav-link-home" class="navbar-link" href="index.html">Home</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a id="nav-link-jobs" class="navbar-link active" href="job.html">Jobs</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a id="nav-link-apply" class="navbar-link" href="apply.html">Apply</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a id="nav-link-about" class="navbar-link" href="about.html">About Us</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Company Logo (Right) -->
+            <div id="header-logo-container" class="logo-box">
+                <a href="index.html" class="logo-link">
+                    <img id="company-logo" class="site-logo" src="images/logo.svg" alt="Pacific Alliances Software Company LTD Logo">
+                </a>
+            </div>
+
         </div>
+    </header>
+    <!-- ================= END SHARED HEADER & NAVBAR ================= -->
 
-        <!-- 4-Box Navigation Menu -->
-        <nav id="main-navbar" class="site-navbar" aria-label="Main Navigation">
-            <ul id="navbar-menu" class="navbar-list">
-                <li class="navbar-item">
-                    <a id="nav-link-home" class="navbar-link" href="index.html">Home</a>
-                </li>
-                <li class="navbar-item">
-                    <a id="nav-link-jobs" class="navbar-link active" href="job.html">Jobs</a>
-                </li>
-                <li class="navbar-item">
-                    <a id="nav-link-apply" class="navbar-link" href="apply.html">Apply</a>
-                </li>
-                <li class="navbar-item">
-                    <a id="nav-link-about" class="navbar-link" href="about.html">About Us</a>
-                </li>
-            </ul>
-        </nav>
 
-        <!-- Company Logo (Right - Optional as per design wireframe) -->
-        <div id="header-logo-container" class="logo-box">
-            <a href="index.html" class="logo-link">
-                <img id="company-logo" class="site-logo" src="images/logo.svg" alt="Pacific Alliances Software Company LTD Logo">
-            </a>
-        </div>
-
-    </div>
-</header>
-<!-- ================= END SHARED HEADER & NAVBAR ================= -->
+    <!-- ================================================================= -->
+    <!-- MAIN JOB POSITIONS CONTENT                                        -->
+    <!-- ================================================================= -->
     <main id="main-content" class="content-wrapper">
 
         <!-- Page Introduction Section -->
-        <section id="jobs-intro-section" class="jobs-intro">
-            <h2 id="jobs-page-title">Job Postitions Available</h2>
-            <p>
+        <section id="jobs-intro" class="section-header">
+            <h2 id="jobs-heading" class="section-title">Job Positions Available</h2>
+            <p id="jobs-subheading" class="section-subtitle">
                 Join a growing engineering team in Singapore building reliable software for
                 clients across Asia-Pacific. Below are our open positions. Please quote the
                 reference number when you apply.
             </p>
         </section>
 
- <!-- ================= JOB POSITION 1: SENIOR FULL-STACK ENGINEER ================= -->
-        <section id="job-fullstack" class="job-listing">
-            <article class="job-card content-box">
-                <header class="job-header">
-                    <h2 id="job-title-fullstack">Senior Full-Stack Engineer</h2>
-                    <p class="job-ref">Reference number: <strong>FS001</strong></p>
+        <!-- ================= JOB POSITION 1: SENIOR FULL-STACK ENGINEER ================= -->
+        <section id="job-fullstack" style="margin-bottom: 28px;">
+            <article id="job-card-fullstack" class="content-box" style="padding: 32px 30px;">
+                <header style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; padding-bottom: 14px; margin-bottom: 16px; border-bottom: 2px solid var(--border-light);">
+                    <h2 class="box-title" style="font-size: 1.6rem; font-weight: 800; margin-bottom: 0;">Senior Full-Stack Engineer</h2>
+                    <span class="box-badge" style="position: static; border-radius: var(--radius-full); font-weight: 600; padding: 5px 14px;">
+                        Reference number: <strong style="color: var(--color-dark-blue); letter-spacing: 0.04em;">FS001</strong>
+                    </span>
                 </header>
 
-                <p class="job-summary">
+                <p class="box-text" style="margin-bottom: 16px;">
                     We are looking for a Senior Full-Stack Engineer to lead the development of
                     next-generation microservices and responsive web platforms using React,
                     Node.js and Docker for our Cloud Engineering department.
                 </p>
 
-                <section class="job-details">
-                    <h3>Salary and Reporting Line</h3>
-                    <dl>
-                        <dt>Salary</dt>
-                        <dd>USD 7,000 - 10,000 per month, depending on experience</dd>
-                        <dt>Reports to</dt>
-                        <dd>Head of Cloud Engineering</dd>
-                        <dt>Location</dt>
-                        <dd>114 Special Street, Singapore (hybrid)</dd>
+                <section>
+                    <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--color-hanada); margin: 22px 0 10px;">Salary and Reporting Line</h3>
+                    <dl class="intro-card" style="display: grid; grid-template-columns: 140px 1fr; gap: 8px 16px; background-color: var(--bg-box-tint); border-left: 5px solid var(--color-kikyo-iroiro); border-radius: var(--radius-md); padding: 16px 20px;">
+                        <dt style="font-weight: 700; color: var(--color-dark-blue);">Salary</dt>
+                        <dd class="box-text" style="margin: 0;">USD 7,000 - 10,000 per month, depending on experience</dd>
+                        <dt style="font-weight: 700; color: var(--color-dark-blue);">Reports to</dt>
+                        <dd class="box-text" style="margin: 0;">Head of Cloud Engineering</dd>
+                        <dt style="font-weight: 700; color: var(--color-dark-blue);">Location</dt>
+                        <dd class="box-text" style="margin: 0;">114 Special Street, Singapore (hybrid)</dd>
                     </dl>
                 </section>
 
-                <section class="job-responsibilities">
-                    <h3>Key Responsibilities</h3>
-                    <ul>
-                        <li>Design and build microservices and RESTful APIs using Node.js.</li>
-                        <li>Develop responsive, accessible web interfaces with React.</li>
-                        <li>Containerise applications with Docker and support their deployment.</li>
-                        <li>Review code and mentor junior developers.</li>
-                        <li>Work with designers and product owners to turn requirements into features.</li>
+                <section>
+                    <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--color-hanada); margin: 22px 0 10px;">Key Responsibilities</h3>
+                    <ul style="list-style: disc; padding-left: 22px; color: var(--text-secondary);">
+                        <li style="margin-bottom: 7px; line-height: 1.55;">Design and build microservices and RESTful APIs using Node.js.</li>
+                        <li style="margin-bottom: 7px; line-height: 1.55;">Develop responsive, accessible web interfaces with React.</li>
+                        <li style="margin-bottom: 7px; line-height: 1.55;">Containerise applications with Docker and support their deployment.</li>
+                        <li style="margin-bottom: 7px; line-height: 1.55;">Review code and mentor junior developers.</li>
+                        <li style="margin-bottom: 7px; line-height: 1.55;">Work with designers and product owners to turn requirements into features.</li>
                     </ul>
                 </section>
 
-                <section class="job-requirements">
-                    <h3>Requirements</h3>
+                <section>
+                    <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--color-hanada); margin: 22px 0 10px;">Requirements</h3>
 
-                    <h4>Essential</h4>
-                    <ul>
-                        <li>Bachelor's degree in Computer Science, IT or a related field.</li>
-                        <li>5+ years of professional full-stack development experience.</li>
-                        <li>Strong skills in JavaScript (ES6+), React and Node.js.</li>
-                        <li>Hands-on experience with Docker and Git.</li>
+                    <h4 style="font-size: 1rem; font-weight: 700; color: var(--color-kikyo-iroiro); margin: 14px 0 6px;">Essential</h4>
+                    <ul style="list-style: disc; padding-left: 22px; color: var(--text-secondary);">
+                        <li style="margin-bottom: 7px; line-height: 1.55;">Bachelor's degree in Computer Science, IT or a related field.</li>
+                        <li style="margin-bottom: 7px; line-height: 1.55;">5+ years of professional full-stack development experience.</li>
+                        <li style="margin-bottom: 7px; line-height: 1.55;">Strong skills in JavaScript (ES6+), React and Node.js.</li>
+                        <li style="margin-bottom: 7px; line-height: 1.55;">Hands-on experience with Docker and Git.</li>
                     </ul>
 
-                    <h4>Preferable</h4>
-                    <ul>
-                        <li>Experience with TypeScript and SQL or NoSQL databases.</li>
-                        <li>Familiarity with CI/CD pipelines and cloud platforms such as AWS.</li>
-                        <li>Experience working in Agile/Scrum teams.</li>
+                    <h4 style="font-size: 1rem; font-weight: 700; color: var(--color-kikyo-iroiro); margin: 14px 0 6px;">Preferable</h4>
+                    <ul style="list-style: disc; padding-left: 22px; color: var(--text-secondary);">
+                        <li style="margin-bottom: 7px; line-height: 1.55;">Experience with TypeScript and SQL or NoSQL databases.</li>
+                        <li style="margin-bottom: 7px; line-height: 1.55;">Familiarity with CI/CD pipelines and cloud platforms such as AWS.</li>
+                        <li style="margin-bottom: 7px; line-height: 1.55;">Experience working in Agile/Scrum teams.</li>
                     </ul>
                 </section>
             </article>
         </section>
 
         <!-- ================= JOB POSITION 2: DEVOPS & CLOUD ARCHITECT ================= -->
-        <section id="job-devops" class="job-listing">
-            <article class="job-card content-box">
-                <header class="job-header">
-                    <h2 id="job-title-devops">DevOps &amp; Cloud Architect</h2>
-                    <p class="job-ref">Reference number: <strong>DO017</strong></p>
+        <section id="job-devops" style="margin-bottom: 28px;">
+            <article id="job-card-devops" class="content-box" style="padding: 32px 30px;">
+                <header style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; padding-bottom: 14px; margin-bottom: 16px; border-bottom: 2px solid var(--border-light);">
+                    <h2 class="box-title" style="font-size: 1.6rem; font-weight: 800; margin-bottom: 0;">DevOps &amp; Cloud Architect</h2>
+                    <span class="box-badge" style="position: static; border-radius: var(--radius-full); font-weight: 600; padding: 5px 14px;">
+                        Reference number: <strong style="color: var(--color-dark-blue); letter-spacing: 0.04em;">DO017</strong>
+                    </span>
                 </header>
 
-                <p class="job-summary">
+                <p class="box-text" style="margin-bottom: 16px;">
                     We are seeking a DevOps &amp; Cloud Architect to design automated CI/CD
                     pipelines, oversee Kubernetes clusters, and optimise the security and
                     reliability of our cloud infrastructure.
                 </p>
 
-                <section class="job-details">
-                    <h3>Salary and Reporting Line</h3>
-                    <dl>
-                        <dt>Salary</dt>
-                        <dd>USD 8,000 - 11,500 per month, depending on experience</dd>
-                        <dt>Reports to</dt>
-                        <dd>Head of Infrastructure &amp; Security</dd>
-                        <dt>Location</dt>
-                        <dd>114 Special Street, Singapore (on-site / hybrid)</dd>
+                <section>
+                    <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--color-hanada); margin: 22px 0 10px;">Salary and Reporting Line</h3>
+                    <dl class="intro-card" style="display: grid; grid-template-columns: 140px 1fr; gap: 8px 16px; background-color: var(--bg-box-tint); border-left: 5px solid var(--color-kikyo-iroiro); border-radius: var(--radius-md); padding: 16px 20px;">
+                        <dt style="font-weight: 700; color: var(--color-dark-blue);">Salary</dt>
+                        <dd class="box-text" style="margin: 0;">USD 8,000 - 11,500 per month, depending on experience</dd>
+                        <dt style="font-weight: 700; color: var(--color-dark-blue);">Reports to</dt>
+                        <dd class="box-text" style="margin: 0;">Head of Infrastructure &amp; Security</dd>
+                        <dt style="font-weight: 700; color: var(--color-dark-blue);">Location</dt>
+                        <dd class="box-text" style="margin: 0;">114 Special Street, Singapore (on-site / hybrid)</dd>
                     </dl>
                 </section>
 
-                <section class="job-responsibilities">
-                    <h3>Key Responsibilities</h3>
-                    <ul>
-                        <li>Design and maintain automated CI/CD pipelines for multiple product teams.</li>
-                        <li>Architect and manage cloud infrastructure on AWS using Infrastructure as Code.</li>
-                        <li>Operate and scale Kubernetes clusters.</li>
-                        <li>Monitor system performance, availability and security.</li>
-                        <li>Respond to incidents and lead post-incident reviews.</li>
+                <section>
+                    <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--color-hanada); margin: 22px 0 10px;">Key Responsibilities</h3>
+                    <ul style="list-style: disc; padding-left: 22px; color: var(--text-secondary);">
+                        <li style="margin-bottom: 7px; line-height: 1.55;">Design and maintain automated CI/CD pipelines for multiple product teams.</li>
+                        <li style="margin-bottom: 7px; line-height: 1.55;">Architect and manage cloud infrastructure on AWS using Infrastructure as Code.</li>
+                        <li style="margin-bottom: 7px; line-height: 1.55;">Operate and scale Kubernetes clusters.</li>
+                        <li style="margin-bottom: 7px; line-height: 1.55;">Monitor system performance, availability and security.</li>
+                        <li style="margin-bottom: 7px; line-height: 1.55;">Respond to incidents and lead post-incident reviews.</li>
                     </ul>
                 </section>
 
-                <section class="job-requirements">
-                    <h3>Requirements</h3>
+                <section>
+                    <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--color-hanada); margin: 22px 0 10px;">Requirements</h3>
 
-                    <h4>Essential</h4>
-                    <ul>
-                        <li>Bachelor's degree in Computer Science, IT or a related field.</li>
-                        <li>5+ years of experience in DevOps, cloud or systems engineering roles.</li>
-                        <li>Hands-on experience with Docker, Kubernetes and Linux administration.</li>
-                        <li>Experience with Terraform or similar IaC tools.</li>
+                    <h4 style="font-size: 1rem; font-weight: 700; color: var(--color-kikyo-iroiro); margin: 14px 0 6px;">Essential</h4>
+                    <ul style="list-style: disc; padding-left: 22px; color: var(--text-secondary);">
+                        <li style="margin-bottom: 7px; line-height: 1.55;">Bachelor's degree in Computer Science, IT or a related field.</li>
+                        <li style="margin-bottom: 7px; line-height: 1.55;">5+ years of experience in DevOps, cloud or systems engineering roles.</li>
+                        <li style="margin-bottom: 7px; line-height: 1.55;">Hands-on experience with Docker, Kubernetes and Linux administration.</li>
+                        <li style="margin-bottom: 7px; line-height: 1.55;">Experience with Terraform or similar IaC tools.</li>
                     </ul>
 
-                    <h4>Preferable</h4>
-                    <ul>
-                        <li>AWS Certified Solutions Architect or DevOps Engineer certification.</li>
-                        <li>Experience with Prometheus, Grafana or similar monitoring tools.</li>
-                        <li>Scripting skills in Python or Bash.</li>
+                    <h4 style="font-size: 1rem; font-weight: 700; color: var(--color-kikyo-iroiro); margin: 14px 0 6px;">Preferable</h4>
+                    <ul style="list-style: disc; padding-left: 22px; color: var(--text-secondary);">
+                        <li style="margin-bottom: 7px; line-height: 1.55;">AWS Certified Solutions Architect or DevOps Engineer certification.</li>
+                        <li style="margin-bottom: 7px; line-height: 1.55;">Experience with Prometheus, Grafana or similar monitoring tools.</li>
+                        <li style="margin-bottom: 7px; line-height: 1.55;">Scripting skills in Python or Bash.</li>
                     </ul>
                 </section>
             </article>
         </section>
 
         <!-- ================= JOB POSITION 3: AI / MACHINE LEARNING ENGINEER ================= -->
-        <section id="job-ai-ml" class="job-listing">
-            <article class="job-card content-box">
-                <header class="job-header">
-                    <h2 id="job-title-ai-ml">AI / Machine Learning Engineer</h2>
-                    <p class="job-ref">Reference number: <strong>ML023</strong></p>
+        <section id="job-ai-ml" style="margin-bottom: 28px;">
+            <article id="job-card-ai-ml" class="content-box" style="padding: 32px 30px;">
+                <header style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; padding-bottom: 14px; margin-bottom: 16px; border-bottom: 2px solid var(--border-light);">
+                    <h2 class="box-title" style="font-size: 1.6rem; font-weight: 800; margin-bottom: 0;">AI / Machine Learning Engineer</h2>
+                    <span class="box-badge" style="position: static; border-radius: var(--radius-full); font-weight: 600; padding: 5px 14px;">
+                        Reference number: <strong style="color: var(--color-dark-blue); letter-spacing: 0.04em;">ML023</strong>
+                    </span>
                 </header>
 
-                <p class="job-summary">
+                <p class="box-text" style="margin-bottom: 16px;">
                     We are looking for an AI / Machine Learning Engineer to train and deploy
                     custom LLM applications and automated predictive data pipelines for our
                     enterprise clients.
                 </p>
 
-                <section class="job-details">
-                    <h3>Salary and Reporting Line</h3>
-                    <dl>
-                        <dt>Salary</dt>
-                        <dd>USD 7,500 - 11,000 per month, depending on experience</dd>
-                        <dt>Reports to</dt>
-                        <dd>Head of Data &amp; AI Innovation</dd>
-                        <dt>Location</dt>
-                        <dd>114 Special Street, Singapore (hybrid)</dd>
+                <section>
+                    <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--color-hanada); margin: 22px 0 10px;">Salary and Reporting Line</h3>
+                    <dl class="intro-card" style="display: grid; grid-template-columns: 140px 1fr; gap: 8px 16px; background-color: var(--bg-box-tint); border-left: 5px solid var(--color-kikyo-iroiro); border-radius: var(--radius-md); padding: 16px 20px;">
+                        <dt style="font-weight: 700; color: var(--color-dark-blue);">Salary</dt>
+                        <dd class="box-text" style="margin: 0;">USD 7,500 - 11,000 per month, depending on experience</dd>
+                        <dt style="font-weight: 700; color: var(--color-dark-blue);">Reports to</dt>
+                        <dd class="box-text" style="margin: 0;">Head of Data &amp; AI Innovation</dd>
+                        <dt style="font-weight: 700; color: var(--color-dark-blue);">Location</dt>
+                        <dd class="box-text" style="margin: 0;">114 Special Street, Singapore (hybrid)</dd>
                     </dl>
                 </section>
 
-                <section class="job-responsibilities">
-                    <h3>Key Responsibilities</h3>
-                    <ul>
-                        <li>Fine-tune, evaluate and deploy LLM-based applications for client use cases.</li>
-                        <li>Build and maintain automated data and predictive modelling pipelines.</li>
-                        <li>Collaborate with software engineers to integrate models into production systems.</li>
-                        <li>Monitor model performance and retrain models when needed.</li>
-                        <li>Document experiments and share findings with the wider team.</li>
+                <section>
+                    <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--color-hanada); margin: 22px 0 10px;">Key Responsibilities</h3>
+                    <ul style="list-style: disc; padding-left: 22px; color: var(--text-secondary);">
+                        <li style="margin-bottom: 7px; line-height: 1.55;">Fine-tune, evaluate and deploy LLM-based applications for client use cases.</li>
+                        <li style="margin-bottom: 7px; line-height: 1.55;">Build and maintain automated data and predictive modelling pipelines.</li>
+                        <li style="margin-bottom: 7px; line-height: 1.55;">Collaborate with software engineers to integrate models into production systems.</li>
+                        <li style="margin-bottom: 7px; line-height: 1.55;">Monitor model performance and retrain models when needed.</li>
+                        <li style="margin-bottom: 7px; line-height: 1.55;">Document experiments and share findings with the wider team.</li>
                     </ul>
                 </section>
 
-                <section class="job-requirements">
-                    <h3>Requirements</h3>
+                <section>
+                    <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--color-hanada); margin: 22px 0 10px;">Requirements</h3>
 
-                    <h4>Essential</h4>
-                    <ul>
-                        <li>Bachelor's or Master's degree in Computer Science, Data Science or a related field.</li>
-                        <li>3+ years of experience in machine learning or applied AI.</li>
-                        <li>Strong Python skills and experience with PyTorch or TensorFlow.</li>
-                        <li>Experience building data pipelines and deploying models.</li>
+                    <h4 style="font-size: 1rem; font-weight: 700; color: var(--color-kikyo-iroiro); margin: 14px 0 6px;">Essential</h4>
+                    <ul style="list-style: disc; padding-left: 22px; color: var(--text-secondary);">
+                        <li style="margin-bottom: 7px; line-height: 1.55;">Bachelor's or Master's degree in Computer Science, Data Science or a related field.</li>
+                        <li style="margin-bottom: 7px; line-height: 1.55;">3+ years of experience in machine learning or applied AI.</li>
+                        <li style="margin-bottom: 7px; line-height: 1.55;">Strong Python skills and experience with PyTorch or TensorFlow.</li>
+                        <li style="margin-bottom: 7px; line-height: 1.55;">Experience building data pipelines and deploying models.</li>
                     </ul>
 
-                    <h4>Preferable</h4>
-                    <ul>
-                        <li>Experience with LLM tooling such as Hugging Face or LangChain.</li>
-                        <li>Familiarity with MLOps practices and cloud ML services.</li>
-                        <li>Publications or open-source contributions in AI/ML.</li>
+                    <h4 style="font-size: 1rem; font-weight: 700; color: var(--color-kikyo-iroiro); margin: 14px 0 6px;">Preferable</h4>
+                    <ul style="list-style: disc; padding-left: 22px; color: var(--text-secondary);">
+                        <li style="margin-bottom: 7px; line-height: 1.55;">Experience with LLM tooling such as Hugging Face or LangChain.</li>
+                        <li style="margin-bottom: 7px; line-height: 1.55;">Familiarity with MLOps practices and cloud ML services.</li>
+                        <li style="margin-bottom: 7px; line-height: 1.55;">Publications or open-source contributions in AI/ML.</li>
                     </ul>
                 </section>
             </article>
         </section>
 
         <!-- ================= ASIDE: APPLICATION GUIDELINES ================= -->
-        <aside id="how-to-apply" class="job-aside content-box">
-            <h2>How to Apply</h2>
-            <ol>
-                <li>Choose the position and note its reference number.</li>
-                <li>Prepare your CV and a short cover letter.</li>
-                <li>Complete the form on our <a href="apply.html">Apply page</a>.</li>
-                <li>Our HR team will contact shortlisted candidates within two weeks.</li>
+        <aside id="how-to-apply" class="content-box cta-card-box" style="text-align: left; padding: 28px 30px; margin-top: 28px;">
+            <h2 class="box-title" style="font-size: 1.4rem; margin-bottom: 12px;">How to Apply</h2>
+            <ol style="list-style: decimal; padding-left: 22px; color: var(--text-secondary);">
+                <li style="margin-bottom: 7px; line-height: 1.55;">Choose the position and note its reference number.</li>
+                <li style="margin-bottom: 7px; line-height: 1.55;">Prepare your CV and a short cover letter.</li>
+                <li style="margin-bottom: 7px; line-height: 1.55;">Complete the form on our <a href="apply.html" style="font-weight: 600; text-decoration: underline;">Apply page</a>.</li>
+                <li style="margin-bottom: 7px; line-height: 1.55;">Our HR team will contact shortlisted candidates within two weeks.</li>
             </ol>
-            <p><small>We are an equal opportunity employer.</small></p>
+            <p style="margin-top: 12px;"><small style="color: var(--text-light);">We are an equal opportunity employer.</small></p>
         </aside>
 
     </main>
+    <!-- ================= END MAIN CONTENT ================= -->
 
+
+    <!-- ================================================================= -->
+    <!-- SHARED FOOTER (COMMON TO ALL 4 PAGES)                             -->
+    <!-- ================================================================= -->
     <footer id="main-footer" class="site-footer">
         <div id="footer-container" class="footer-layout">
 
@@ -472,6 +335,6 @@
         </div>
     </footer>
     <!-- ================= END FOOTER ================= -->
+
 </body>
 </html>
-
