@@ -238,7 +238,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   5. BOX CONTENT STYLING ("Box content should be in boxes like these")
+   5. BOX CONTENT STYLING ("Box content should be in boxes like these") + minor adjustment to statbox
    -------------------------------------------------------------------------- */
 .content-box {
     background-color: var(--bg-surface);
@@ -255,6 +255,15 @@ img {
     transform: translateY(-5px);
     box-shadow: var(--shadow-hover);
     border-color: var(--color-fuji-purple);
+}
+
+.content-box.stat-box {
+    text-align: center;
+}
+
+.stat-number {
+    color: var(--color-kikyo-iroiro);
+    font-size: 2rem;
 }
 
 /* --------------------------------------------------------------------------
