@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-label="Pacific Alliances Digital Learning Platform Illustration">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#293671" />
+      <stop offset="60%" stop-color="#4D63C2" />
+      <stop offset="100%" stop-color="#7165B9" />
+    </linearGradient>
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#EDF3FB" />
+    </linearGradient>
+    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7165B9" />
+      <stop offset="100%" stop-color="#9F9BD3" />
+    </linearGradient>
+    <linearGradient id="cardGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4D63C2" />
+      <stop offset="100%" stop-color="#387DA4" />
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#1E2442" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="800" height="450" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Subtle Ambient Glow Orbs -->
+  <circle cx="120" cy="90" r="140" fill="#9F9BD3" opacity="0.15" />
+  <circle cx="700" cy="360" r="180" fill="#8048B8" opacity="0.2" />
+
+  <!-- Central Digital Classroom Laptop / Canvas -->
+  <g filter="url(#cardShadow)">
+    <!-- Laptop Base -->
+    <rect x="150" y="70" width="500" height="280" rx="14" fill="#FFFFFF" />
+    <rect x="165" y="85" width="470" height="250" rx="8" fill="url(#screenGrad)" />
+    <!-- Stand -->
+    <path d="M 100 355 L 700 355 L 680 375 L 120 375 Z" fill="#D8E0F0" />
+    <rect x="350" y="358" width="100" height="6" rx="3" fill="#8D95B5" />
+  </g>
+
+  <!-- Laptop Screen UI Elements: Accessible EdTech Interface -->
+  <!-- Top Nav in Laptop -->
+  <rect x="180" y="100" width="440" height="32" rx="6" fill="#293671" />
+  <circle cx="200" cy="116" r="5" fill="#9F9BD3" />
+  <circle cx="216" cy="116" r="5" fill="#4D63C2" />
+  <circle cx="232" cy="116" r="5" fill="#387DA4" />
+  <text x="250" y="121" fill="#FFFFFF" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold">Pacific Alliances EdTech Portal — Inclusive Learning Suite</text>
+
+  <!-- Left Sidebar: Learning Modules -->
+  <rect x="180" y="142" width="115" height="175" rx="6" fill="#FFFFFF" />
+  <rect x="190" y="155" width="95" height="12" rx="4" fill="url(#cardGrad1)" />
+  <rect x="190" y="177" width="80" height="8" rx="3" fill="#D8E0F0" />
+  <rect x="190" y="195" width="70" height="8" rx="3" fill="#D8E0F0" />
+  <rect x="190" y="213" width="85" height="8" rx="3" fill="#D8E0F0" />
+  <rect x="190" y="235" width="95" height="24" rx="4" fill="#4D63C2" />
+  <text x="200" y="251" fill="#FFFFFF" font-family="'Segoe UI', sans-serif" font-size="9" font-weight="bold">Start Interactive</text>
+
+  <!-- Main Screen Content: Interactive Video & STEM Simulator -->
+  <rect x="305" y="142" width="315" height="110" rx="8" fill="#293671" />
+  <!-- Play Icon -->
+  <circle cx="462" cy="197" r="20" fill="url(#cardGrad1)" />
+  <polygon points="458,189 470,197 458,205" fill="#FFFFFF" />
+  <text x="320" y="165" fill="#EDF3FB" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="bold">Interactive Virtual Laboratory</text>
+  <text x="320" y="180" fill="#9F9BD3" font-family="'Segoe UI', sans-serif" font-size="10">Real-time collaboration &amp; accessibility captions active</text>
+
+  <!-- Bottom Interactive Widgets -->
+  <rect x="305" y="262" width="150" height="55" rx="6" fill="#FFFFFF" />
+  <text x="315" y="280" fill="#293671" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold">Accessibility Tools</text>
+  <rect x="315" y="290" width="130" height="6" rx="3" fill="#387DA4" />
+  <text x="315" y="307" fill="#555E7E" font-family="'Segoe UI', sans-serif" font-size="9">Screen-reader verified</text>
+
+  <rect x="470" y="262" width="150" height="55" rx="6" fill="#FFFFFF" />
+  <text x="480" y="280" fill="#293671" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold">Student Analytics</text>
+  <rect x="480" y="290" width="110" height="6" rx="3" fill="#8048B8" />
+  <text x="480" y="307" fill="#555E7E" font-family="'Segoe UI', sans-serif" font-size="9">99.4% Completion rate</text>
+
+  <!-- Floating Achievement Badge (Left) -->
+  <g filter="url(#cardShadow)">
+    <rect x="60" y="180" width="130" height="70" rx="10" fill="#FFFFFF" />
+    <circle cx="85" cy="215" r="16" fill="url(#cardGrad2)" />
+    <!-- Graduation / Book icon -->
+    <path d="M 77 215 L 85 210 L 93 215 L 85 220 Z" fill="#FFFFFF" />
+    <path d="M 80 217 L 80 223 C 80 225, 90 225, 90 223 L 90 217" fill="none" stroke="#FFFFFF" stroke-width="1.5" />
+    <text x="110" y="208" fill="#293671" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold">Inclusive Tools</text>
+    <text x="110" y="222" fill="#555E7E" font-family="'Segoe UI', sans-serif" font-size="8">WCAG 2.1 AAA</text>
+    <text x="110" y="234" fill="#387DA4" font-family="'Segoe UI', sans-serif" font-size="8">Certified Access</text>
+  </g>
+
+  <!-- Floating Community Badge (Right) -->
+  <g filter="url(#cardShadow)">
+    <rect x="615" y="120" width="140" height="65" rx="10" fill="#FFFFFF" />
+    <circle cx="640" cy="152" r="14" fill="#8048B8" />
+    <circle cx="637" cy="149" r="4" fill="#FFFFFF" />
+    <circle cx="644" cy="155" r="3" fill="#FFFFFF" />
+    <text x="662" y="146" fill="#293671" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold">Global Reach</text>
+    <text x="662" y="160" fill="#7165B9" font-family="'Segoe UI', sans-serif" font-size="9" font-weight="bold">500,000+ Learners</text>
+    <text x="662" y="172" fill="#555E7E" font-family="'Segoe UI', sans-serif" font-size="8">Across 18 Countries</text>
+  </g>
+</svg>

@@ -3,29 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pacific Alliances Software Company LTD - Career and Recruitment Portal. Explore software engineering and tech job opportunities in Singapore.">
-    <meta name="author" content="Pacific Alliances Software Company LTD">
-    <title>Home - Pacific Alliances Software Company LTD</title>
-    <!-- Shared external stylesheet -->
+    <meta name="description" content="Pacific Alliances EdTech Solutions LTD - Developing accessible, inclusive digital learning tools and recruiting web developers and designers.">
+    <meta name="author" content="Pacific Alliances EdTech Solutions LTD">
+    <title>Home - Pacific Alliances EdTech Solutions LTD</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .hero-badge-tag {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #FFFFFF;
+            padding: 6px 16px;
+            border-radius: 999px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+    </style>
 </head>
 <body id="page-home" class="home-page">
 
-    <!-- ================================================================= -->
-    <!-- SHARED HEADER & NAVBAR (COMMON TO ALL 4 PAGES)                     -->
-    <!-- Copy this <header> block across job.html, apply.html, about.html   -->
-    <!-- and update class="active" on the corresponding page link           -->
-    <!-- ================================================================= -->
     <header id="main-header" class="site-header">
         <div id="header-container" class="header-container">
             
-            <!-- Company Branding (Left) -->
             <div id="company-branding" class="branding-box">
-                <h1 id="site-title" class="company-name">Pacific Alliances Software Company LTD</h1>
-                <p id="site-tagline" class="company-tagline">Empowering Innovation, Engineering Excellence</p>
+                <h1 id="site-title" class="company-name">Pacific Alliances EdTech Solutions LTD</h1>
+                <p id="site-tagline" class="company-tagline">Empowering Minds, Innovating Inclusive Digital Learning</p>
             </div>
 
-            <!-- 4-Box Navigation Menu -->
             <nav id="main-navbar" class="site-navbar" aria-label="Main Navigation">
                 <ul id="navbar-menu" class="navbar-list">
                     <li class="navbar-item">
@@ -43,134 +50,189 @@
                 </ul>
             </nav>
 
-            <!-- Company Logo (Right - Optional as per design wireframe) -->
             <div id="header-logo-container" class="logo-box">
                 <a href="index.html" class="logo-link">
-                    <img id="company-logo" class="site-logo" src="images/logo.svg" alt="Pacific Alliances Software Company LTD Logo">
+                    <img id="company-logo" class="site-logo" src="images/logo.svg" alt="Pacific Alliances EdTech Solutions LTD Logo">
                 </a>
             </div>
 
         </div>
     </header>
-    <!-- ================= END SHARED HEADER & NAVBAR ================= -->
 
-
-    <!-- ================================================================= -->
-    <!-- MAIN HOMEPAGE CONTENT                                             -->
-    <!-- ================================================================= -->
     <main id="main-content" class="content-wrapper">
 
-        <!-- 1. Hero Recruitment Banner -->
         <section id="hero-section" class="hero-banner">
             <div id="hero-container" class="hero-content">
-                <h2 id="hero-heading" class="hero-title">Build Your Future With Pacific Alliances</h2>
+                <span class="hero-badge-tag">G04 Educational Technology Pioneer</span>
+                <h2 id="hero-heading" class="hero-title">Shaping The Future Of Inclusive Digital Education</h2>
                 <p id="hero-description" class="hero-subtitle">
-                    Join Singapore's premier software engineering firm. We are looking for passionate developers, architects, and innovators to solve complex tech challenges and shape global digital solutions.
+                    Pacific Alliances EdTech Solutions LTD is a premier educational technology company developing accessible digital learning tools, adaptive classroom platforms, and inclusive e-learning services. We are hiring forward-thinking web developers and designers to break educational barriers worldwide.
                 </p>
                 <div id="hero-actions" class="hero-button-group">
                     <a id="hero-btn-explore" class="action-btn primary-btn" href="job.html">Explore Open Positions</a>
                     <a id="hero-btn-apply" class="action-btn secondary-btn" href="apply.html">Submit Application</a>
                 </div>
+
+                <figure class="company-feature-image">
+                    <img src="images/edtech-platform.svg" alt="Pacific Alliances Interactive Digital Learning Ecosystem Platform Suite" class="feature-img">
+                    <figcaption>Pacific Alliances next-generation inclusive digital learning ecosystem.</figcaption>
+                </figure>
             </div>
         </section>
 
-        <!-- 2. Company Overview (Who We Are - Box Cards) -->
+        <section id="search-section" class="search-form-section">
+            <div class="content-box" style="text-align: center; max-width: 820px; margin: 0 auto;">
+                <form class="search-form" action="job.html" method="get" role="search">
+                    <label for="site-search" class="search-label">Search Open EdTech Positions &amp; Educational Roles</label>
+                    <div class="search-box-wrapper">
+                        <input type="search" id="site-search" name="q" class="search-input" placeholder="e.g. Front-End Web Developer, UI/UX Designer, Accessibility, Cloud..." required>
+                        <button type="submit" class="search-button">Search</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
         <section id="intro-section" class="overview-section">
             <header class="section-header">
                 <h2 id="intro-heading" class="section-title">Who We Are</h2>
-                <p id="intro-subheading" class="section-subtitle">A leading technology powerhouse based in Singapore</p>
+                <p id="intro-subheading" class="section-subtitle">Pioneering accessible, engaging, and equitable educational technologies</p>
             </header>
 
             <div id="intro-box-container" class="intro-cards-container">
                 <article id="intro-box-mission" class="content-box intro-card">
-                    <h3 class="box-title">Our Mission</h3>
+                    <h3 class="box-title">Universal Education For All</h3>
                     <p class="box-text">
-                        Delivering scalable, secure, and modern enterprise software systems across Asia-Pacific while fostering a culture of innovation and collaboration.
+                        We build digital classrooms and adaptive learning platforms engineered to reach every student, ensuring that physical disabilities, geographical distance, and economic hurdles never hinder educational success.
                     </p>
                 </article>
 
-                <article id="intro-box-workplace" class="content-box intro-card">
-                    <h3 class="box-title">Our Workplace</h3>
+                <article id="intro-box-accessibility" class="content-box intro-card">
+                    <h3 class="box-title">Accessibility by Design</h3>
                     <p class="box-text">
-                        Located at 114 Special Street in Singapore, our high-tech campus offers hybrid working flexibility, state-of-the-art workstations, and an inclusive international culture.
+                        Accessibility is embedded into our core architecture. From WCAG 2.1 AAA high-contrast interfaces and screen-reader optimizations to AI-driven closed captions, inclusivity drives every line of code we write.
                     </p>
                 </article>
 
-                <article id="intro-box-talent" class="content-box intro-card">
-                    <h3 class="box-title">People First</h3>
+                <article id="intro-box-culture" class="content-box intro-card">
+                    <h3 class="box-title">Empowering Tech Creators</h3>
                     <p class="box-text">
-                        We invest heavily in human potential. From sponsored technical certifications to continuous mentorship programs, your career growth is our priority.
+                        Our collaborative campus fosters continuous learning, psychological safety, and innovation. We empower our engineers and designers with the best tools, mentorship, and creative autonomy to excel.
                     </p>
                 </article>
             </div>
         </section>
 
-        <!-- 3. Why Join Us (Perks & Benefits Boxes) -->
-        <section id="benefits-section" class="perks-section">
+        <section id="platform-matrix-section" class="table-section">
             <header class="section-header">
-                <h2 id="benefits-heading" class="section-title">Why Join Pacific Alliances?</h2>
-                <p id="benefits-subheading" class="section-subtitle">Great perks, modern technology, and limitless potential</p>
+                <h2 id="matrix-heading" class="section-title">Our EdTech Platform &amp; Services Suite</h2>
+                <p id="matrix-subheading" class="section-subtitle">Scalable digital learning tools deployed across regional schools, colleges, and training academies</p>
             </header>
 
-            <!-- Box Content Container ("Box content should be in boxes like these") -->
+            <div class="table-responsive-wrapper">
+                <table class="edtech-table">
+                    <caption>Pacific Alliances Digital Learning Platform Architecture &amp; Service Tiers</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Platform Tier</th>
+                            <th scope="col">Target Sector</th>
+                            <th scope="col">Core Learning Modules</th>
+                            <th scope="col">Accessibility &amp; Inclusivity Features</th>
+                            <th scope="col">Platform SLA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="row-header">K-12 Inclusive Suite</th>
+                            <td>Primary &amp; Secondary Schools</td>
+                            <td>Interactive virtual whiteboards, gamified STEM modules, parent-teacher collaboration portals</td>
+                            <td rowspan="2" class="merged-cell">WCAG 2.1 AA Compliance, Screen-Reader Optimisation, Dyslexia-Friendly Typography, Keyboard-Only Navigation</td>
+                            <td>99.9% Uptime</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-header">Higher Education LMS</th>
+                            <td>Universities &amp; Colleges</td>
+                            <td>Hybrid lecture streaming, collaborative research repositories, automated code evaluators</td>
+                            <td>99.95% Uptime</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-header">Vocational &amp; Corporate LMS</th>
+                            <td>Enterprise &amp; Lifelong Learners</td>
+                            <td>Micro-credential digital badges, industry mentorship video chats, self-paced certification tracks</td>
+                            <td>Multi-language subtitle translations, high-contrast themes, screen magnification support</td>
+                            <td>99.99% Uptime</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="row-header" colspan="2">Universal Platform Infrastructure Standards</th>
+                            <td colspan="3" class="merged-cell">Cloud-Native Microservices (Docker &amp; AWS), Zero-Bandwidth Offline Sync, Full Student Data Encryption (GDPR &amp; Privacy Act 1988)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="benefits-section" class="perks-section">
+            <header class="section-header">
+                <h2 id="benefits-heading" class="section-title">Why Build Your Career At Pacific Alliances?</h2>
+                <p id="benefits-subheading" class="section-subtitle">Meaningful mission, competitive compensation, and an inclusive culture</p>
+            </header>
+
             <div id="perks-boxes-grid" class="boxes-grid-container">
 
                 <div id="perk-box-compensation" class="content-box perk-item">
                     <div class="box-badge">01</div>
                     <h3 class="box-title">Competitive Compensation</h3>
                     <p class="box-description">
-                        Top-tier regional base salaries, 13th-month bonus, annual performance-based dividends, and comprehensive medical coverage for you and your family.
+                        Top-tier regional base salaries, 13th-month bonus, annual performance-based dividends, and comprehensive healthcare coverage for you and your family.
                     </p>
                 </div>
 
                 <div id="perk-box-techstack" class="content-box perk-item">
                     <div class="box-badge">02</div>
-                    <h3 class="box-title">Modern Tech Stack</h3>
+                    <h3 class="box-title">Modern EdTech Stack</h3>
                     <p class="box-description">
-                        Work with cloud-native architectures (AWS/GCP/Azure), Kubernetes, Go, TypeScript, Rust, Python, and cutting-edge generative AI models.
+                        Build with TypeScript, React, Node.js, Web Accessibility APIs (ARIA), WebRTC interactive media, microservices, and ethical learning AI algorithms.
                     </p>
                 </div>
 
                 <div id="perk-box-flexibility" class="content-box perk-item">
                     <div class="box-badge">03</div>
-                    <h3 class="box-title">Work-Life Balance</h3>
+                    <h3 class="box-title">Flexible Hybrid Lifestyle</h3>
                     <p class="box-description">
-                        Flexible working hours and hybrid work-from-home options. 21 days annual leave, paid parental leave, and regular health & wellness subsidies.
+                        Flexible core working hours, generous work-from-home options, 21 days annual leave, paid parental leave, and regular ergonomics equipment allowances.
                     </p>
                 </div>
 
                 <div id="perk-box-learning" class="content-box perk-item">
                     <div class="box-badge">04</div>
-                    <h3 class="box-title">Continuous Growth</h3>
+                    <h3 class="box-title">Continuous Growth Budget</h3>
                     <p class="box-description">
-                        Annual USD $2,500 personal learning budget for international conferences, professional tech certifications, books, and online courses.
+                        Annual AUD $3,000 personal learning budget for international conferences, professional tech certifications, books, and university-level courses.
                     </p>
                 </div>
 
                 <div id="perk-box-culture" class="content-box perk-item">
                     <div class="box-badge">05</div>
-                    <h3 class="box-title">Inclusive Culture</h3>
+                    <h3 class="box-title">Inclusive &amp; Diverse Team</h3>
                     <p class="box-description">
-                        A collaborative environment with software engineers from over 15 nationalities, free open-office snacks, gaming lounge, and regular team retreats.
+                        An inclusive, welcoming team uniting tech professionals from over 15 nationalities, dedicated to psychological safety and equal opportunity.
                     </p>
                 </div>
 
                 <div id="perk-box-impact" class="content-box perk-item">
                     <div class="box-badge">06</div>
-                    <h3 class="box-title">High-Impact Projects</h3>
+                    <h3 class="box-title">Transformative Social Impact</h3>
                     <p class="box-description">
-                        Directly contribute to software solutions deployed to millions of active users across finance, healthcare, and e-commerce industries.
+                        Directly impact hundreds of thousands of students, teachers, and adult learners each day by making world-class digital education truly accessible.
                     </p>
                 </div>
 
             </div>
         </section>
 
-        <!-- 4. Featured Job Openings (Links to job.html) -->
         <section id="featured-jobs-section" class="featured-jobs-container">
             <header class="section-header">
-                <h2 id="featured-jobs-heading" class="section-title">Hot Openings</h2>
-                <p id="featured-jobs-subheading" class="section-subtitle">Take a look at some of the key positions we are urgently hiring</p>
+                <h2 id="featured-jobs-heading" class="section-title">Urgent EdTech Openings</h2>
+                <p id="featured-jobs-subheading" class="section-subtitle">Join our multidisciplinary engineering and product design teams</p>
             </header>
 
             <div id="jobs-preview-list" class="jobs-cards-grid">
@@ -179,31 +241,31 @@
                     <span class="job-tag full-time">Full-time</span>
                     <h3 class="job-role-title">Senior Full-Stack Engineer</h3>
                     <p class="job-department">Department: Cloud Engineering</p>
-                    <p class="job-location">Location: Singapore (Hybrid)</p>
+                    <p class="job-location">Location: Melbourne / Singapore (Hybrid)</p>
                     <p class="job-brief">
-                        Lead the development of next-generation microservices and responsive web platforms using React, Node.js, and Docker.
+                        Lead the engineering of accessible, high-performance web components and resilient microservices for our core digital classroom platforms.
                     </p>
                     <a class="card-link" href="job.html">View Job Description &rarr;</a>
                 </article>
 
                 <article id="job-card-devops" class="content-box job-preview-card">
                     <span class="job-tag full-time">Full-time</span>
-                    <h3 class="job-role-title">DevOps & Cloud Architect</h3>
-                    <p class="job-department">Department: Infrastructure & Security</p>
-                    <p class="job-location">Location: Singapore (On-site / Hybrid)</p>
+                    <h3 class="job-role-title">DevOps &amp; Cloud Architect</h3>
+                    <p class="job-department">Department: Infrastructure &amp; Security</p>
+                    <p class="job-location">Location: Melbourne / Singapore (Hybrid)</p>
                     <p class="job-brief">
-                        Design automated CI/CD pipelines, oversee Kubernetes clusters, and optimize cloud infrastructure security and reliability.
+                        Architect and automate secure, scalable cloud infrastructure and CI/CD pipelines supporting real-time virtual classrooms and educational data.
                     </p>
                     <a class="card-link" href="job.html">View Job Description &rarr;</a>
                 </article>
 
-                <article id="job-card-ai" class="content-box job-preview-card">
+                <article id="job-card-uiux" class="content-box job-preview-card">
                     <span class="job-tag full-time">Full-time</span>
-                    <h3 class="job-role-title">AI / Machine Learning Engineer</h3>
-                    <p class="job-department">Department: Data & AI Innovation</p>
-                    <p class="job-location">Location: Singapore (Hybrid)</p>
+                    <h3 class="job-role-title">UI/UX &amp; Accessibility Designer</h3>
+                    <p class="job-department">Department: Learning Experience (LX) Design</p>
+                    <p class="job-location">Location: Remote / Hybrid</p>
                     <p class="job-brief">
-                        Train and deploy custom LLM applications and automated predictive data pipelines for our enterprise clients.
+                        Design empathetic, intuitive, and WCAG-compliant digital learning user journeys, interactive wireframes, and design system components.
                     </p>
                     <a class="card-link" href="job.html">View Job Description &rarr;</a>
                 </article>
@@ -211,52 +273,65 @@
             </div>
 
             <div id="all-jobs-link-box" class="section-footer-action">
-                <a id="btn-view-all-jobs" class="action-btn text-link-btn" href="job.html">View All Available Jobs on Jobs Page &rarr;</a>
+                <a id="btn-view-all-jobs" class="action-btn text-link-btn" href="job.html">View All Positions on Jobs Page &rarr;</a>
             </div>
         </section>
 
-        <!-- 5. 4-Step Hiring Process -->
         <section id="process-section" class="recruitment-process-section">
             <header class="section-header">
-                <h2 id="process-heading" class="section-title">Our 4-Step Hiring Process</h2>
-                <p id="process-subheading" class="section-subtitle">Simple, transparent, and respectful of your time</p>
+                <h2 id="process-heading" class="section-title">Our 4-Step Hiring Journey</h2>
+                <p id="process-subheading" class="section-subtitle">Transparent, accessible, and supportive at every stage</p>
             </header>
 
             <div id="process-steps-container" class="process-steps-grid">
                 
                 <div id="step-box-1" class="content-box process-step-box">
                     <div class="step-number">Step 1</div>
-                    <h3 class="step-title">Discover & Choose</h3>
-                    <p class="step-text">Explore our open vacancies on the <a href="job.html" class="inline-link">Jobs page</a> to find the role matching your skill set and aspirations.</p>
+                    <h3 class="step-title">Discover Roles</h3>
+                    <p class="step-text">Review open positions on the <a href="job.html" class="inline-link">Jobs page</a> to find the role matching your passions and skill set.</p>
                 </div>
 
                 <div id="step-box-2" class="content-box process-step-box">
                     <div class="step-number">Step 2</div>
                     <h3 class="step-title">Apply Online</h3>
-                    <p class="step-text">Fill out our straightforward application form on the <a href="apply.html" class="inline-link">Apply page</a> with your resume and contact information.</p>
+                    <p class="step-text">Complete our validated application form on the <a href="apply.html" class="inline-link">Apply page</a> with your resume and career details.</p>
                 </div>
 
                 <div id="step-box-3" class="content-box process-step-box">
                     <div class="step-number">Step 3</div>
-                    <h3 class="step-title">Technical & Cultural Chat</h3>
-                    <p class="step-text">Meet with our lead engineers and hiring managers to discuss your technical expertise and how we can grow together.</p>
+                    <h3 class="step-title">Inclusive Conversation</h3>
+                    <p class="step-text">Engage in technical and cultural dialogues with our engineering leaders with accessible accommodations provided on request.</p>
                 </div>
 
                 <div id="step-box-4" class="content-box process-step-box">
                     <div class="step-number">Step 4</div>
-                    <h3 class="step-title">Offer & Welcome</h3>
-                    <p class="step-text">Receive an attractive job offer package and complete your smooth onboarding to the Pacific Alliances family.</p>
+                    <h3 class="step-title">Offer &amp; Onboarding</h3>
+                    <p class="step-text">Receive your comprehensive offer package, complete onboarding smoothly, and start creating impactful educational tools.</p>
                 </div>
 
             </div>
         </section>
 
-        <!-- 6. Call To Action (CTA Banner Box) -->
+        <section id="acknowledgement-section" class="acknowledgement-section" aria-labelledby="ack-heading">
+            <div class="acknowledgement-card">
+                <h2 id="ack-heading" class="acknowledgement-title">Acknowledgement of Country &amp; Indigenous Educational Inclusion</h2>
+                <p class="acknowledgement-text">
+                    Pacific Alliances respectfully acknowledges the Traditional Custodians of Country throughout Australia and recognizes their continuing connection to land, waters, culture, and community. We pay our deepest respects to Elders past, present, and emerging.
+                </p>
+                <p class="acknowledgement-text">
+                    As an Educational Technology company, we believe that education is the foundation of equity, voice, and opportunity. We are passionately committed to closing the digital education divide in remote and regional communities by engineering bandwidth-resilient offline learning platforms, supporting Indigenous-led digital curriculum initiatives, and promoting digital literacy.
+                </p>
+                <p class="acknowledgement-text">
+                    We actively encourage applications from Aboriginal and Torres Strait Islander web developers, educators, researchers, and UI/UX designers to join our teams and help build truly inclusive educational technology for generations to come.
+                </p>
+            </div>
+        </section>
+
         <section id="cta-section" class="cta-banner-section">
             <div id="cta-box-container" class="content-box cta-card-box">
-                <h2 id="cta-heading" class="cta-title">Ready To Shape The Future Of Technology?</h2>
+                <h2 id="cta-heading" class="cta-title">Ready To Transform Digital Education With Us?</h2>
                 <p id="cta-desc" class="cta-text">
-                    Your next big career milestone begins right here in Singapore. Check our openings or submit an express application today!
+                    Your next meaningful career milestone begins here. Explore our open positions or submit an express application today!
                 </p>
                 <div id="cta-buttons" class="cta-button-group">
                     <a id="cta-btn-jobs" class="action-btn primary-btn" href="job.html">Browse Job Roles</a>
@@ -266,28 +341,20 @@
         </section>
 
     </main>
-    <!-- ================= END MAIN CONTENT ================= -->
 
-
-    <!-- ================================================================= -->
-    <!-- SHARED FOOTER (COMMON TO ALL 4 PAGES)                             -->
-    <!-- As per wireframe: Footer - General information - contacts - etc    -->
-    <!-- ================================================================= -->
     <footer id="main-footer" class="site-footer">
         <div id="footer-container" class="footer-layout">
 
-            <!-- Column 1: Company Information & Singapore Address -->
             <div id="footer-company-info" class="footer-col company-info-col">
-                <h3 id="footer-company-title" class="footer-heading">Pacific Alliances Software Company LTD</h3>
+                <h3 id="footer-company-title" class="footer-heading">Pacific Alliances EdTech Solutions LTD</h3>
                 <p id="footer-company-address" class="footer-text address-text">
-                    <strong>Address:</strong> 114 Special street, Singapore
+                    <strong>Campus:</strong> 114 Special Street, Singapore &amp; Melbourne, Australia
                 </p>
                 <p id="footer-company-slogan" class="footer-text slogan-text">
-                    Delivering world-class software engineering and digital transformation solutions.
+                    Empowering Minds, Innovating Inclusive Digital Learning tools and platforms worldwide.
                 </p>
             </div>
 
-            <!-- Column 2: Quick Navigation Links -->
             <div id="footer-quick-links" class="footer-col quick-links-col">
                 <h3 class="footer-heading">Navigation</h3>
                 <ul id="footer-nav-list" class="footer-links-list">
@@ -298,49 +365,45 @@
                 </ul>
             </div>
 
-            <!-- Column 3: Contact & HR Department -->
             <div id="footer-contact-info" class="footer-col contacts-col">
-                <h3 class="footer-heading">Contact & HR Dept</h3>
+                <h3 class="footer-heading">Contact &amp; Admissions</h3>
                 <ul id="footer-contact-list" class="footer-contact-items">
                     <li class="contact-item">
                         <strong>Recruitment Email:</strong> 
-                        <a class="contact-link" href="mailto:careers@pacificalliances.sg">careers@pacificalliances.sg</a>
+                        <a class="contact-link" href="mailto:careers@pacificalliances-edtech.edu.au">careers@pacificalliances-edtech.edu.au</a>
                     </li>
                     <li class="contact-item">
                         <strong>General Inquiries:</strong> 
-                        <a class="contact-link" href="mailto:contact@pacificalliances.sg">contact@pacificalliances.sg</a>
+                        <a class="contact-link" href="mailto:info@pacificalliances-edtech.edu.au">info@pacificalliances-edtech.edu.au</a>
                     </li>
                     <li class="contact-item">
                         <strong>Phone Hotline:</strong> 
-                        <a class="contact-link" href="tel:+6561234567">+65 6123 4567</a>
+                        <a class="contact-link" href="tel:+61392148000">+61 3 9214 8000</a>
                     </li>
                     <li class="contact-item">
-                        <strong>Working Hours:</strong> Mon - Fri, 09:00 AM - 06:00 PM (SGT)
+                        <strong>Office Hours:</strong> Mon - Fri, 09:00 AM - 05:30 PM (AEST / SGT)
                     </li>
                 </ul>
             </div>
 
-            <!-- Column 4: Social Media Channels -->
             <div id="footer-social-info" class="footer-col social-col">
-                <h3 class="footer-heading">Connect With Us</h3>
-                <p class="footer-text">Follow our tech blogs and social channels for tech updates and hiring events:</p>
+                <h3 class="footer-heading">Project Links &amp; Portals</h3>
+                <p class="footer-text">Access project management tracking, source code repositories, and professional networks:</p>
                 <ul id="footer-social-list" class="footer-social-links">
+                    <li class="social-item"><a class="social-link" href="https://pacificalliances.atlassian.net/jira" target="_blank" rel="noopener noreferrer">Jira Project Board</a></li>
+                    <li class="social-item"><a class="social-link" href="https://github.com/nduong2668/Apllied-Web" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
                     <li class="social-item"><a class="social-link" href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                    <li class="social-item"><a class="social-link" href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                    <li class="social-item"><a class="social-link" href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
                 </ul>
             </div>
 
         </div>
 
-        <!-- Bottom Copyright Bar -->
         <div id="footer-copyright" class="footer-bottom-bar">
             <p id="copyright-notice" class="copyright-text">
-                &copy; 2026 Pacific Alliances Software Company LTD. All rights reserved. | 114 Special street, Singapore.
+                &copy; 2026 Pacific Alliances EdTech Solutions LTD. All rights reserved. | Built for COS10011 Assignment 1 (Group G04 - EdTech).
             </p>
         </div>
     </footer>
-    <!-- ================= END FOOTER ================= -->
 
 </body>
 </html>
