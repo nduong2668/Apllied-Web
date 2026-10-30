@@ -5,28 +5,28 @@
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   1. CSS VARIABLES (BẢNG MÀU THEO WIREFRAME THIẾT KẾ)
+   1. CSS VARIABLES (DESIGN COLOR PALETTE)
    -------------------------------------------------------------------------- */
 :root {
-    /* Bảng màu chính thức từ tài liệu thiết kế */
+    /* Official design color palette */
     --color-fuji-purple:  #9F9BD3; /* Fuji purple (sf18) */
     --color-blue-violet:  #7165B9; /* Blue-violet (sf20) */
     --color-kikyo-iroiro: #4D63C2; /* Kikyo-iroiro (D18) */
     --color-iris:         #8048B8; /* Iris (D20) */
-    --color-hanada:       #387DA4; /* 縹色 / Hanada (D16) */
+    --color-hanada:       #387DA4; /* Hanada blue (D16) */
     --color-dark-blue:    #293671; /* Dark blue (DK18) */
 
-    /* Màu nền & Văn bản phụ trợ */
-    --bg-body:            #F4F7FC; /* Nền trang xám lam dịu nhẹ */
-    --bg-surface:         #FFFFFF; /* Nền trắng của thẻ/hộp */
-    --bg-box-tint:        #EDF3FB; /* Nền xanh lam nhạt cho hộp đặc biệt */
-    --text-primary:       #1E2442; /* Màu chữ chính (xanh đen đậm) */
-    --text-secondary:     #555E7E; /* Màu chữ phụ / mô tả */
-    --text-light:         #8D95B5; /* Màu chữ mờ / metadata */
-    --border-light:       #D8E0F0; /* Viền mỏng của hộp */
-    --border-accent:      #BAC9EB; /* Viền nhấn mạnh */
+    /* Background and neutral text colors */
+    --bg-body:            #F4F7FC; /* Soft slate-blue page background */
+    --bg-surface:         #FFFFFF; /* White card/box background */
+    --bg-box-tint:        #EDF3FB; /* Light blue accent tint for special boxes */
+    --text-primary:       #1E2442; /* Primary body text (deep dark blue) */
+    --text-secondary:     #555E7E; /* Secondary text / descriptions */
+    --text-light:         #8D95B5; /* Muted text / metadata */
+    --border-light:       #D8E0F0; /* Subtle box border */
+    --border-accent:      #BAC9EB; /* Accent border */
 
-    /* Đổ bóng & Bo góc */
+    /* Shadows and Border Radii */
     --radius-sm:          8px;
     --radius-md:          14px;
     --radius-lg:          20px;
@@ -40,7 +40,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   2. RESET CƠ BẢN & TYPOGRAPHY
+   2. BASIC RESET & TYPOGRAPHY
    -------------------------------------------------------------------------- */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -84,8 +84,8 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   3. HEADER & NAVBAR (DÙNG CHUNG CHO CẢ 4 TRANG)
-   Bố cục: Company Name (trái) - 4 Box Menu (giữa) - Logo (phải)
+   3. HEADER & NAVIGATION BAR (SHARED ACROSS ALL 4 PAGES)
+   Layout: Company Branding (Left) - 4-Box Menu (Center) - Logo (Right)
    -------------------------------------------------------------------------- */
 .site-header {
     background-color: var(--bg-surface);
@@ -107,7 +107,7 @@ img {
     gap: 20px;
 }
 
-/* Tên công ty / Branding */
+/* Company Branding */
 .branding-box {
     flex: 1;
     min-width: 250px;
@@ -128,7 +128,7 @@ img {
     margin-top: 3px;
 }
 
-/* Thanh điều hướng 4 Box theo đúng ghi chú wireframe: "Header menu (4 box lead to 4 pages)" */
+/* 4-Box Navigation Bar as per wireframe: "Header menu (4 box lead to 4 pages)" */
 .site-navbar {
     display: flex;
     justify-content: center;
@@ -144,7 +144,7 @@ img {
     display: inline-block;
 }
 
-/* Định dạng từng Box menu */
+/* Navigation Box Items */
 .navbar-link {
     display: inline-block;
     padding: 10px 22px;
@@ -158,7 +158,7 @@ img {
     text-align: center;
 }
 
-/* Hiệu ứng khi hover vào hộp menu */
+/* Hover Effect for Navigation Boxes */
 .navbar-link:hover {
     background-color: var(--color-fuji-purple);
     color: #FFFFFF;
@@ -167,7 +167,7 @@ img {
     box-shadow: 0 4px 12px rgba(113, 101, 185, 0.25);
 }
 
-/* Trạng thái trang đang chọn (Active) */
+/* Active Navigation State */
 .navbar-link.active {
     background: linear-gradient(135deg, var(--color-blue-violet) 0%, var(--color-dark-blue) 100%);
     color: #FFFFFF;
@@ -175,7 +175,7 @@ img {
     box-shadow: 0 4px 14px rgba(41, 54, 113, 0.3);
 }
 
-/* Khối Logo (Bên phải) */
+/* Company Logo Container */
 .logo-box {
     display: flex;
     align-items: center;
@@ -194,7 +194,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   4. LAYOUT CHUNG & NỘI DUNG CHÍNH (MAIN CONTENT)
+   4. GENERAL LAYOUT & MAIN CONTENT WRAPPER
    -------------------------------------------------------------------------- */
 .content-wrapper {
     flex: 1;
@@ -204,7 +204,7 @@ img {
     padding: 36px 24px 60px;
 }
 
-/* Tiêu đề chung cho mỗi phần */
+/* Section Header */
 .section-header {
     text-align: center;
     margin-bottom: 34px;
@@ -238,7 +238,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   5. KHỐI HỘP ĐẶC TRƯNG ("Box content should be in boxes like these")
+   5. BOX CONTENT STYLING ("Box content should be in boxes like these")
    -------------------------------------------------------------------------- */
 .content-box {
     background-color: var(--bg-surface);
@@ -258,7 +258,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   6. 1. HERO BANNER
+   6. HERO BANNER SECTION
    -------------------------------------------------------------------------- */
 .hero-banner {
     background: linear-gradient(135deg, var(--color-dark-blue) 0%, var(--color-blue-violet) 70%, var(--color-iris) 100%);
@@ -313,7 +313,7 @@ img {
     flex-wrap: wrap;
 }
 
-/* Nút bấm (Button Components) */
+/* Action Buttons */
 .action-btn {
     display: inline-flex;
     align-items: center;
@@ -353,7 +353,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   7. 2. OVERVIEW / WHO WE ARE SECTION
+   7. COMPANY OVERVIEW SECTION (WHO WE ARE)
    -------------------------------------------------------------------------- */
 .overview-section {
     margin-bottom: 56px;
@@ -384,7 +384,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   8. 3. PERKS & BENEFITS (WHY JOIN US - LƯỚI BOX)
+   8. PERKS & BENEFITS (WHY JOIN US - BOX GRID)
    -------------------------------------------------------------------------- */
 .perks-section {
     margin-bottom: 56px;
@@ -422,7 +422,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   9. 4. HOT OPENINGS (FEATURED JOBS)
+   9. FEATURED JOB OPENINGS (JOB PREVIEW CARDS)
    -------------------------------------------------------------------------- */
 .featured-jobs-container {
     margin-bottom: 56px;
@@ -517,7 +517,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   10. 5. APPLICATION PROCESS STEPS
+   10. RECRUITMENT PROCESS (4-STEP APPLICATION)
    -------------------------------------------------------------------------- */
 .recruitment-process-section {
     margin-bottom: 56px;
@@ -570,7 +570,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   11. 6. CALL TO ACTION (CTA BANNER BOX)
+   11. CALL TO ACTION SECTION (CTA BANNER BOX)
    -------------------------------------------------------------------------- */
 .cta-banner-section {
     margin-bottom: 20px;
@@ -625,7 +625,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   12. FOOTER (THEO WIREFRAME: "Footer - General information - contacts - etc")
+   12. FOOTER (AS PER WIREFRAME: "Footer - General information - contacts - etc")
    -------------------------------------------------------------------------- */
 .site-footer {
     background-color: var(--color-dark-blue);
@@ -685,7 +685,7 @@ img {
     color: var(--color-fuji-purple);
 }
 
-/* Quick links list */
+/* Quick Links Column */
 .footer-links-list,
 .footer-contact-items,
 .footer-social-links {
@@ -706,7 +706,7 @@ img {
     transform: translateX(4px);
 }
 
-/* Contacts column */
+/* Contacts Column */
 .contact-item {
     font-size: 0.9rem;
     color: #CCD5EE;
@@ -728,7 +728,7 @@ img {
     text-decoration: underline;
 }
 
-/* Social media links */
+/* Social Media Links */
 .social-link {
     display: inline-flex;
     align-items: center;
@@ -746,7 +746,7 @@ img {
     color: #FFFFFF;
 }
 
-/* Copyright bottom bar */
+/* Copyright Bottom Bar */
 .footer-bottom-bar {
     border-top: 1px solid rgba(255, 255, 255, 0.12);
     padding: 20px 24px;
@@ -763,7 +763,7 @@ img {
    13. RESPONSIVE DESIGN (TABLET & MOBILE)
    -------------------------------------------------------------------------- */
 
-/* Tablet (dưới 1024px) */
+/* Tablet view (max-width: 1024px) */
 @media (max-width: 1024px) {
     .header-container {
         flex-wrap: wrap;
@@ -793,7 +793,7 @@ img {
     }
 }
 
-/* Mobile (dưới 768px) */
+/* Mobile view (max-width: 768px) */
 @media (max-width: 768px) {
     .header-container {
         flex-direction: column;
@@ -875,7 +875,6 @@ img {
         padding: 36px 18px 24px;
     }
 }
-
 
 /* --------------------------------------------------------------------------
    14. FORM STYLING (JOB APPLICATION FORM - APPLY.HTML)
@@ -990,4 +989,137 @@ img {
     background: linear-gradient(135deg, var(--color-iris) 0%, var(--color-blue-violet) 100%);
     box-shadow: var(--shadow-hover);
     transform: translateY(-2px);
+}
+/* --------------------------------------------------------------------------
+   15. STYLING (JOB POSITIONS AVAILABLE PAGE - JOB.HTML)
+   -------------------------------------------------------------------------- */
+.job-listing {
+    margin-bottom: 28px;
+    scroll-margin-top: 100px; 
+}
+
+.job-card {
+    padding: 32px 30px;
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-bottom: 14px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid var(--border-light);
+}
+
+.job-header .job-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 0;
+}
+
+.job-header .job-ref {
+    position: static;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    padding: 5px 14px;
+}
+
+.job-header .job-ref strong {
+    color: var(--color-dark-blue);
+    letter-spacing: 0.04em;
+}
+
+.job-summary {
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
+
+.job-subtitle {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-hanada);
+    margin: 22px 0 10px;
+}
+
+.job-subheading {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-kikyo-iroiro);
+    margin: 14px 0 6px;
+}
+
+.job-details-grid {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 8px 16px;
+    background-color: var(--bg-box-tint);
+    border-left: 5px solid var(--color-kikyo-iroiro);
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+}
+
+.job-details-grid dt {
+    font-weight: 700;
+    color: var(--color-dark-blue);
+}
+
+.job-details-grid dd {
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.job-list {
+    list-style: disc;
+    padding-left: 22px;
+    color: var(--text-secondary);
+}
+
+.job-list li,
+.job-order-list li {
+    margin-bottom: 7px;
+    line-height: 1.55;
+}
+
+.job-aside {
+    text-align: left;
+    padding: 28px 30px;
+    margin-top: 28px;
+}
+
+.job-aside-title {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.job-order-list {
+    list-style: decimal;
+    padding-left: 22px;
+    color: var(--text-secondary);
+}
+
+.job-aside a {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.job-note {
+    margin-top: 12px;
+}
+
+.job-note small {
+    color: var(--text-light);
+}
+
+@media (max-width: 768px) {
+    .job-details-grid {
+        grid-template-columns: 1fr;
+        gap: 2px;
+    }
+    .job-details-grid dd {
+        margin-bottom: 8px;
+    }
 }
