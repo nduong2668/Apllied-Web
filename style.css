@@ -238,7 +238,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   5. BOX CONTENT STYLING ("Box content should be in boxes like these")
+   5. BOX CONTENT STYLING ("Box content should be in boxes like these") + minor adjustment to statbox
    -------------------------------------------------------------------------- */
 .content-box {
     background-color: var(--bg-surface);
@@ -257,11 +257,26 @@ img {
     border-color: var(--color-fuji-purple);
 }
 
+.content-box.stat-box {
+    text-align: center;
+}
+
+.stat-number {
+    color: var(--color-kikyo-iroiro);
+    font-size: 2rem;
+}
+
 /* --------------------------------------------------------------------------
    6. HERO BANNER SECTION
    -------------------------------------------------------------------------- */
 .hero-banner {
-    background: linear-gradient(135deg, var(--color-dark-blue) 0%, var(--color-blue-violet) 70%, var(--color-iris) 100%);
+    background-color: var(--color-dark-blue);
+    background-image: 
+        radial-gradient(circle at 18% 22%, rgba(159, 155, 211, 0.28) 0%, transparent 42%),
+        radial-gradient(circle at 82% 78%, rgba(77, 99, 194, 0.32) 0%, transparent 48%),
+        linear-gradient(135deg, var(--color-dark-blue) 0%, var(--color-blue-violet) 70%, var(--color-iris) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #FFFFFF;
     border-radius: var(--radius-lg);
     padding: 56px 40px;

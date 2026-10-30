@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body id="page-jobs" class="jobs-page page-jobs">
+<body id="page-jobs" class="jobs-page page-jobs">
 
     <!-- ================================================================= -->
     <!-- SHARED HEADER & NAVBAR (COMMON TO ALL 4 PAGES)                     -->
@@ -40,6 +41,23 @@
                     </li>
                 </ul>
             </nav>
+            <!-- 4-Box Navigation Menu -->
+            <nav id="main-navbar" class="site-navbar" aria-label="Main Navigation">
+                <ul id="navbar-menu" class="navbar-list">
+                    <li class="navbar-item">
+                        <a id="nav-link-home" class="navbar-link" href="index.html">Home</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a id="nav-link-jobs" class="navbar-link active" href="job.html">Jobs</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a id="nav-link-apply" class="navbar-link" href="apply.html">Apply</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a id="nav-link-about" class="navbar-link" href="about.html">About Us</a>
+                    </li>
+                </ul>
+            </nav>
 
             <!-- Company Logo (Right) -->
             <div id="header-logo-container" class="logo-box">
@@ -47,7 +65,21 @@
                     <img id="company-logo" class="site-logo" src="images/logo.svg" alt="Pacific Alliances Software Company LTD Logo">
                 </a>
             </div>
+            <!-- Company Logo (Right) -->
+            <div id="header-logo-container" class="logo-box">
+                <a href="index.html" class="logo-link">
+                    <img id="company-logo" class="site-logo" src="images/logo.svg" alt="Pacific Alliances Software Company LTD Logo">
+                </a>
+            </div>
 
+        </div>
+    </header>
+    <!-- ================= END SHARED HEADER & NAVBAR ================= -->
+
+
+    <!-- ================================================================= -->
+    <!-- MAIN JOB POSITIONS CONTENT                                        -->
+    <!-- ================================================================= -->
         </div>
     </header>
     <!-- ================= END SHARED HEADER & NAVBAR ================= -->
@@ -250,14 +282,27 @@
                 <li style="margin-bottom: 7px; line-height: 1.55;">Prepare your CV and a short cover letter.</li>
                 <li style="margin-bottom: 7px; line-height: 1.55;">Complete the form on our <a href="apply.html" style="font-weight: 600; text-decoration: underline;">Apply page</a>.</li>
                 <li style="margin-bottom: 7px; line-height: 1.55;">Our HR team will contact shortlisted candidates within two weeks.</li>
+        <aside id="how-to-apply" class="content-box cta-card-box" style="text-align: left; padding: 28px 30px; margin-top: 28px;">
+            <h2 class="box-title" style="font-size: 1.4rem; margin-bottom: 12px;">How to Apply</h2>
+            <ol style="list-style: decimal; padding-left: 22px; color: var(--text-secondary);">
+                <li style="margin-bottom: 7px; line-height: 1.55;">Choose the position and note its reference number.</li>
+                <li style="margin-bottom: 7px; line-height: 1.55;">Prepare your CV and a short cover letter.</li>
+                <li style="margin-bottom: 7px; line-height: 1.55;">Complete the form on our <a href="apply.html" style="font-weight: 600; text-decoration: underline;">Apply page</a>.</li>
+                <li style="margin-bottom: 7px; line-height: 1.55;">Our HR team will contact shortlisted candidates within two weeks.</li>
             </ol>
+            <p style="margin-top: 12px;"><small style="color: var(--text-light);">We are an equal opportunity employer.</small></p>
             <p style="margin-top: 12px;"><small style="color: var(--text-light);">We are an equal opportunity employer.</small></p>
         </aside>
 
     </main>
     <!-- ================= END MAIN CONTENT ================= -->
 
+    <!-- ================= END MAIN CONTENT ================= -->
 
+
+    <!-- ================================================================= -->
+    <!-- SHARED FOOTER (COMMON TO ALL 4 PAGES)                             -->
+    <!-- ================================================================= -->
     <!-- ================================================================= -->
     <!-- SHARED FOOTER (COMMON TO ALL 4 PAGES)                             -->
     <!-- ================================================================= -->
@@ -324,6 +369,7 @@
         </div>
     </footer>
     <!-- ================= END FOOTER ================= -->
+
 
 </body>
 </html>
