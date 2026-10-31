@@ -1005,190 +1005,136 @@ img {
     box-shadow: var(--shadow-hover);
     transform: translateY(-2px);
 }
-
-
 /* --------------------------------------------------------------------------
-   15. SEARCH BOX & FORM (HOMEPAGE REQUIREMENT)
+   15. STYLING (JOB POSITIONS AVAILABLE PAGE - JOB.HTML)
    -------------------------------------------------------------------------- */
-.search-form-section {
-    margin-bottom: 48px;
+.job-listing {
+    margin-bottom: 28px;
+    scroll-margin-top: 100px; 
 }
 
-.search-form {
-    max-width: 720px;
-    margin: 0 auto;
-    text-align: center;
+.job-card {
+    padding: 32px 30px;
 }
 
-.search-label {
-    display: block;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--color-dark-blue);
-    margin-bottom: 12px;
-}
-
-.search-box-wrapper {
+.job-header {
     display: flex;
-    gap: 10px;
+    justify-content: space-between;
     align-items: center;
-}
-
-.search-input {
-    flex: 1;
-    padding: 14px 20px;
-    font-size: 1rem;
-    border: 2px solid var(--border-light);
-    border-radius: var(--radius-md);
-    outline: none;
-    transition: var(--transition);
-    background-color: #FFFFFF;
-}
-
-.search-input:focus {
-    border-color: var(--color-kikyo-iroiro);
-    box-shadow: 0 0 0 4px rgba(77, 99, 194, 0.15);
-}
-
-.search-button {
-    padding: 14px 30px;
-    background: linear-gradient(135deg, var(--color-kikyo-iroiro) 0%, var(--color-blue-violet) 100%);
-    color: #FFFFFF;
-    font-size: 1rem;
-    font-weight: 700;
-    border: none;
-    border-radius: var(--radius-md);
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.search-button:hover {
-    background: linear-gradient(135deg, var(--color-iris) 0%, var(--color-dark-blue) 100%);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-hover);
-}
-
-/* --------------------------------------------------------------------------
-   16. TABLE WITH CELL MERGING (HOMEPAGE REQUIREMENT)
-   -------------------------------------------------------------------------- */
-.table-section {
-    margin-bottom: 56px;
-}
-
-.table-responsive-wrapper {
-    overflow-x: auto;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-card);
-    border: 1.5px solid var(--border-light);
-    background-color: var(--bg-surface);
-}
-
-.edtech-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.95rem;
-    text-align: left;
-}
-
-.edtech-table caption {
-    caption-side: top;
-    font-size: 1.15rem;
-    font-weight: 800;
-    color: var(--color-dark-blue);
-    padding: 18px 24px;
-    text-align: left;
-    background-color: var(--bg-box-tint);
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-bottom: 14px;
+    margin-bottom: 16px;
     border-bottom: 2px solid var(--border-light);
 }
 
-.edtech-table th, 
-.edtech-table td {
-    padding: 14px 18px;
-    border: 1px solid var(--border-light);
-    vertical-align: middle;
+.job-header .job-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 0;
 }
 
-.edtech-table thead th {
-    background: linear-gradient(135deg, var(--color-dark-blue) 0%, var(--color-blue-violet) 100%);
-    color: #FFFFFF;
+.job-header .job-ref {
+    position: static;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    padding: 5px 14px;
+}
+
+.job-header .job-ref strong {
+    color: var(--color-dark-blue);
+    letter-spacing: 0.04em;
+}
+
+.job-summary {
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
+
+.job-subtitle {
+    font-size: 1.15rem;
     font-weight: 700;
-    letter-spacing: 0.02em;
+    color: var(--color-hanada);
+    margin: 22px 0 10px;
 }
 
-.edtech-table tbody tr:nth-child(even) {
-    background-color: #F8F9FE;
+.job-subheading {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-kikyo-iroiro);
+    margin: 14px 0 6px;
 }
 
-.edtech-table tbody tr:hover {
-    background-color: #EDF2FB;
+.job-details-grid {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 8px 16px;
+    background-color: var(--bg-box-tint);
+    border-left: 5px solid var(--color-kikyo-iroiro);
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
 }
 
-.edtech-table .row-header {
-    background-color: #F0F4FC;
+.job-details-grid dt {
     font-weight: 700;
     color: var(--color-dark-blue);
 }
 
-.edtech-table .merged-cell {
-    background-color: #E8EEFA;
-    font-weight: 700;
-    color: var(--color-kikyo-iroiro);
-    text-align: center;
+.job-details-grid dd {
+    color: var(--text-secondary);
+    margin: 0;
 }
 
-/* --------------------------------------------------------------------------
-   17. ACKNOWLEDGEMENT OF COUNTRY & INDIGENOUS INCLUSION
-   -------------------------------------------------------------------------- */
-.acknowledgement-section {
-    margin-bottom: 56px;
+.job-list {
+    list-style: disc;
+    padding-left: 22px;
+    color: var(--text-secondary);
 }
 
-.acknowledgement-card {
-    background: linear-gradient(135deg, #FFFDF8 0%, #F5EFEB 100%);
-    border: 2px solid #D4A373;
-    border-left: 8px solid #B05D3B;
-    border-radius: var(--radius-lg);
-    padding: 32px 30px;
-    box-shadow: var(--shadow-card);
+.job-list li,
+.job-order-list li {
+    margin-bottom: 7px;
+    line-height: 1.55;
 }
 
-.acknowledgement-title {
-    font-size: 1.35rem;
-    font-weight: 800;
-    color: #582F0E;
+.job-aside {
+    text-align: left;
+    padding: 28px 30px;
+    margin-top: 28px;
+}
+
+.job-aside-title {
+    font-size: 1.4rem;
     margin-bottom: 12px;
 }
 
-.acknowledgement-text {
-    font-size: 0.98rem;
-    color: #4A3525;
-    line-height: 1.7;
-    margin-bottom: 12px;
+.job-order-list {
+    list-style: decimal;
+    padding-left: 22px;
+    color: var(--text-secondary);
 }
 
-.acknowledgement-text:last-child {
-    margin-bottom: 0;
+.job-aside a {
+    font-weight: 600;
+    text-decoration: underline;
 }
 
-/* --------------------------------------------------------------------------
-   18. COMPANY FEATURE IMAGE & BACKGROUND GRAPHIC
-   -------------------------------------------------------------------------- */
-.company-feature-image {
-    margin: 32px auto 0;
-    max-width: 760px;
-    text-align: center;
+.job-note {
+    margin-top: 12px;
 }
 
-.feature-img {
-    width: 100%;
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-hover);
-    border: 2px solid rgba(255, 255, 255, 0.4);
+.job-note small {
+    color: var(--text-light);
 }
 
-.company-feature-image figcaption {
-    font-size: 0.9rem;
-    color: #E2E8F8;
-    margin-top: 10px;
-    font-style: italic;
+@media (max-width: 768px) {
+    .job-details-grid {
+        grid-template-columns: 1fr;
+        gap: 2px;
+    }
+    .job-details-grid dd {
+        margin-bottom: 8px;
+    }
 }
