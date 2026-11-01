@@ -1141,3 +1141,126 @@ img {
         margin-bottom: 8px;
     }
 }
+
+/*16. about page styling */
+.about-custom-banner {
+    border: 2px dashed #9F9BD3;
+    background-color: #293671;
+    color: #FFFFFF;
+    padding: 30px;
+    border-radius: 14px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.about-custom-banner .hero-title {
+    font-size: 2rem;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.about-custom-banner .hero-subtitle {
+    color: #E2E8F8;
+    margin-bottom: 0;
+}
+
+.about-section-spacing {
+    margin-bottom: 30px;
+}
+
+.about-center-align {
+    text-align: center;
+}
+
+.about-list-disc {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.about-list-circle {
+    list-style-type: circle;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.about-dl {
+    margin-top: 15px;
+}
+
+.member-dt {
+    font-weight: bold;
+    color: var(--color-dark-blue);
+    font-size: 1.1rem;
+    margin-top: 15px;
+}
+
+.member-dd {
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.student-id {
+    display: inline-block;
+    background-color: #EDF3FB;
+    color: #4D63C2;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-weight: bold;
+    border: 1px solid #BAC9EB;
+}
+
+.bordered-figure {
+    border: 2px solid #BAC9EB;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.group-photo-img {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.fun-facts-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(41, 54, 113, 0.07);
+}
+
+.fun-facts-table caption {
+    padding: 8px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-align: left;
+}
+
+.fun-facts-table th {
+    background-color: #4D63C2;
+    color: #FFFFFF;
+    padding: 12px 16px;
+    border: 1px solid #D8E0F0;
+    text-align: left;
+}
+
+.fun-facts-table td {
+    padding: 12px 16px;
+    border: 1px solid #D8E0F0;
+}
+
+.fun-facts-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.fun-facts-table tbody tr:hover {
+    background-color: #EDF3FB;
+}
