@@ -1,13 +1,28 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pacific Alliances Software Company LTD - Job Application Form. Submit your application for open software engineering positions.">
-    <meta name="author" content="Pacific Alliances Software Company LTD">
-    <title>Job Application Form - Pacific Alliances Software Company LTD</title>
+    <meta name="description" content="Pacific Alliances Smart City Consultancy LTD - Job Application Form. Submit your application for open Smart City engineering positions.">
+    <meta name="author" content="Pacific Alliances Smart City Consultancy LTD">
+    <title>Job Application Form - Pacific Alliances Smart City Consultancy LTD</title>
+
     <!-- Shared external stylesheet -->
     <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- Embedded CSS (page-specific, Apply page only; uses colour variables from styles.css) -->
+    <style>
+        .apply-page .form-card-box {
+            border-top: 5px solid var(--color-kikyo-iroiro);
+        }
+        .apply-page .form-legend {
+            color: var(--color-dark-blue);
+            font-weight: 700;
+        }
+        .apply-page .form-control::placeholder {
+            color: var(--text-light);
+        }
+    </style>
 </head>
 <body id="page-apply" class="apply-page">
 
@@ -16,11 +31,11 @@
     <!-- ================================================================= -->
     <header id="main-header" class="site-header">
         <div id="header-container" class="header-container">
-            
+
             <!-- Company Branding (Left) -->
             <div id="company-branding" class="branding-box">
-                <h1 id="site-title" class="company-name">Pacific Alliances Software Company LTD</h1>
-                <p id="site-tagline" class="company-tagline">Empowering Innovation, Engineering Excellence</p>
+                <h1 id="site-title" class="company-name">Pacific Alliances Smart City Consultancy LTD</h1>
+                <p id="site-tagline" class="company-tagline">Intelligent Urban Infrastructure, Sustainable Digital Cities</p>
             </div>
 
             <!-- 4-Box Navigation Menu (Active on Apply page) -->
@@ -41,10 +56,10 @@
                 </ul>
             </nav>
 
-            <!-- Company Logo (Right - Optional as per design wireframe) -->
+            <!-- Company Logo (Right) -->
             <div id="header-logo-container" class="logo-box">
                 <a href="index.html" class="logo-link">
-                    <img id="company-logo" class="site-logo" src="images/logo.svg" alt="Pacific Alliances Software Company LTD Logo">
+                    <img id="company-logo" class="site-logo" src="images/logo.svg" alt="Pacific Alliances Smart City Consultancy LTD Logo">
                 </a>
             </div>
 
@@ -60,7 +75,8 @@
 
         <section id="apply-intro" class="section-header">
             <h2 id="apply-heading" class="section-title">Job Application Form</h2>
-            <p id="apply-subheading" class="section-subtitle">Please complete the form below to apply for our open engineering vacancies</p>
+            <!-- Inline style -->
+            <p id="apply-subheading" class="section-subtitle" style="font-style: italic;">Please complete the form below to apply for our open Smart City vacancies</p>
         </section>
 
         <section id="application-form-section" class="form-container-section">
@@ -72,7 +88,7 @@
                         <label for="jobref" class="form-label">Job reference number</label>
                         <input type="text" id="jobref" name="jobref" class="form-control"
                                pattern="[A-Za-z0-9]{5}" maxlength="5" minlength="5"
-                               placeholder="e.g. SE101"
+                               placeholder="e.g. SC101"
                                title="Exactly 5 alphanumeric characters" required>
                     </p>
 
@@ -174,35 +190,35 @@
                         <legend class="form-legend">Skill list</legend>
                         <div class="checkbox-options-group">
                             <label class="checkbox-option-label">
-                                <input type="checkbox" id="html" name="skills[]" value="HTML">
-                                HTML
+                                <input type="checkbox" id="iot" name="skills[]" value="IoT Telemetry">
+                                IoT Telemetry
                             </label>
 
                             <label class="checkbox-option-label">
-                                <input type="checkbox" id="css" name="skills[]" value="CSS">
-                                CSS
+                                <input type="checkbox" id="scada" name="skills[]" value="SCADA">
+                                SCADA
                             </label>
 
                             <label class="checkbox-option-label">
-                                <input type="checkbox" id="js" name="skills[]" value="JavaScript">
-                                JavaScript
+                                <input type="checkbox" id="gis" name="skills[]" value="GIS Mapping">
+                                GIS Mapping
                             </label>
 
                             <label class="checkbox-option-label">
-                                <input type="checkbox" id="php" name="skills[]" value="PHP">
-                                PHP
+                                <input type="checkbox" id="python" name="skills[]" value="Python Data Science">
+                                Python Data Science
                             </label>
 
                             <label class="checkbox-option-label">
-                                <input type="checkbox" id="sql" name="skills[]" value="SQL">
-                                SQL
+                                <input type="checkbox" id="cloud" name="skills[]" value="Cloud and Edge Computing">
+                                Cloud &amp; Edge Computing
                             </label>
                         </div>
                     </fieldset>
 
                     <p class="form-group">
                         <label for="otherskills" class="form-label">Other skills</label>
-                        <textarea id="otherskills" name="otherskills" class="form-control form-textarea" rows="5" cols="40" placeholder="List any other relevant technical skills, tools, or frameworks..."></textarea>
+                        <textarea id="otherskills" name="otherskills" class="form-control form-textarea" rows="5" cols="40" placeholder="List any other relevant technical skills, tools, or frameworks (e.g. smart grid, traffic analytics, MQTT)..."></textarea>
                     </p>
 
                     <div class="form-actions-box">
@@ -224,14 +240,14 @@
     <footer id="main-footer" class="site-footer">
         <div id="footer-container" class="footer-layout">
 
-            <!-- Column 1: Company Information & MEL Address -->
+            <!-- Column 1: Company Information -->
             <div id="footer-company-info" class="footer-col company-info-col">
-                <h3 id="footer-company-title" class="footer-heading">Pacific Alliances Software Company LTD</h3>
+                <h3 id="footer-company-title" class="footer-heading">Pacific Alliances Smart City Consultancy LTD</h3>
                 <p id="footer-company-address" class="footer-text address-text">
-                    <strong>Address:</strong> 114 Special street, Melbourne
+                    <strong>Offices:</strong> 114 Special Street, Singapore &amp; Melbourne, Australia
                 </p>
                 <p id="footer-company-slogan" class="footer-text slogan-text">
-                    Delivering world-class software engineering and digital transformation solutions.
+                    Engineering Smarter, Greener and Resilient Urban Infrastructure across the Asia-Pacific.
                 </p>
             </div>
 
@@ -248,27 +264,27 @@
 
             <!-- Column 3: Contact & HR Department -->
             <div id="footer-contact-info" class="footer-col contacts-col">
-                <h3 class="footer-heading">Contact & HR Dept</h3>
+                <h3 class="footer-heading">Consultancy &amp; HR Enquiries</h3>
                 <ul id="footer-contact-list" class="footer-contact-items">
                     <li class="contact-item">
-                        <strong>Recruitment Email:</strong> 
-                        <a class="contact-link" href="mailto:careers@pacificalliances.sg">careers@pacificalliances.sg</a>
+                        <strong>Careers Email:</strong>
+                        <a class="contact-link" href="mailto:careers@pacificalliances-smartcity.com.au">careers@pacificalliances-smartcity.com.au</a>
                     </li>
                     <li class="contact-item">
-                        <strong>General Inquiries:</strong> 
-                        <a class="contact-link" href="mailto:contact@pacificalliances.sg">contact@pacificalliances.sg</a>
+                        <strong>General Inquiries:</strong>
+                        <a class="contact-link" href="mailto:info@pacificalliances-smartcity.com.au">info@pacificalliances-smartcity.com.au</a>
                     </li>
                     <li class="contact-item">
-                        <strong>Phone Hotline:</strong> 
-                        <a class="contact-link" href="tel:+6561234567">+65 6123 4567</a>
+                        <strong>Advisory Hotline:</strong>
+                        <a class="contact-link" href="tel:+61392148000">+61 3 9214 8000</a>
                     </li>
                     <li class="contact-item">
-                        <strong>Working Hours:</strong> Mon - Fri, 09:00 AM - 06:00 PM (SGT)
+                        <strong>Business Hours:</strong> Mon - Fri, 08:30 AM - 05:30 PM (AEST / SGT)
                     </li>
                 </ul>
             </div>
 
-            <!-- Column 4: Social Media Channels -->
+            <!-- Column 4: Project Portals & Repositories -->
             <div id="footer-social-info" class="footer-col social-col">
                 <h3 class="footer-heading">Project Portals &amp; Repositories</h3>
                 <p class="footer-text">Access sprint tracking boards, open source repositories, and professional networks:</p>
@@ -284,7 +300,7 @@
         <!-- Bottom Copyright Bar -->
         <div id="footer-copyright" class="footer-bottom-bar">
             <p id="copyright-notice" class="copyright-text">
-                &copy; 2026 Pacific Alliances Software Company LTD. All rights reserved. | 114 Special street, Melbourne.
+                &copy; 2026 Pacific Alliances Smart City Consultancy LTD. All rights reserved. | Built for COS10011 Assignment 1 (Group G02 - Smart City Infrastructure Consultancy).
             </p>
         </div>
     </footer>
