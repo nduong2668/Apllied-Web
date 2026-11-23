@@ -1,3 +1,4 @@
+<!-- connect db requirements -->
 <?php
 require_once("settings.php");
 
@@ -5,7 +6,7 @@ $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
 if (!$conn) {
     die("<p>Database connection failure: " . htmlspecialchars(mysqli_connect_error()) . "</p>");
 }
-
+// search bar + avoid sql injection
 $search = isset($_GET['search']) ? trim($_GET['search']) : '';
 
 if ($search !== '') {
@@ -24,7 +25,7 @@ if ($search !== '') {
     $sql = "SELECT * FROM jobs ORDER BY job_id ASC";
     $result = mysqli_query($conn, $sql);
 }
-
+// 
 function renderListItems($text) {
     $items = explode("\n", $text);
     $html = "";
@@ -37,6 +38,7 @@ function renderListItems($text) {
     return $html;
 }
 ?>
+<!-- adopt former html + css internal + css external -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
