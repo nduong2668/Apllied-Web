@@ -189,6 +189,7 @@ function renderListItems($text) {
 
 </body>
 </html>
+<!-- memory-free + close -->
 <?php
 if (isset($stmt)) {
     mysqli_stmt_close($stmt);
