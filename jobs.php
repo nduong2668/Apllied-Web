@@ -89,7 +89,7 @@ function renderListItems($text) {
     </style>
 </head>
 <body id="page-jobs" class="jobs-page page-jobs">
-
+<!-- reuse UI + modify data -->
     <?php include("header.inc"); ?>
 
     <main id="main-content" class="content-wrapper">
