@@ -1,14 +1,14 @@
-<!-- connect db requirements -->
 <?php
+// connect db requirements 
 require_once("settings.php");
 
 $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
 if (!$conn) {
     die("<p>Database connection failure: " . htmlspecialchars(mysqli_connect_error()) . "</p>");
 }
-// search bar + avoid sql injection
+// search bar process; get = searched keywords in url WITHOUT modification
 $search = isset($_GET['search']) ? trim($_GET['search']) : '';
-
+// sql query + check availability; prepared statments avoid sql injections (AI)
 if ($search !== '') {
     $sql = "SELECT * FROM jobs 
             WHERE title LIKE ? 
@@ -25,20 +25,21 @@ if ($search !== '') {
     $sql = "SELECT * FROM jobs ORDER BY job_id ASC";
     $result = mysqli_query($conn, $sql);
 }
-// 
+// split list: \n -> <li> tags + prevent xss (AI)
 function renderListItems($text) {
     $items = explode("\n", $text);
     $html = "";
     foreach ($items as $item) {
         $clean = trim($item);
         if ($clean !== "") {
-            $html .= "<li>" . htmlspecialchars($clean, ENT_QUOTES, 'UTF-8') . "</li>\n";
+            $html .= "<li>" . htmlspecialchars($clean, ENT_QUOTES, 'UTF-8') . "</li>\n"; 
+            
         }
     }
     return $html;
 }
 ?>
-<!-- adopt former html + css internal + css external -->
+<!-- reuse former html + css internal + css external -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -99,7 +100,7 @@ function renderListItems($text) {
                 Join a premier consultancy organisation working with city councils and industry partners to develop digital platforms for smart transport, 
                 energy monitoring, and urban services management. Below are our open positions. Please quote the reference number when you apply.
             </p>
-
+<!-- save keywords typed -->
             <form method="get" action="jobs.php" class="job-search-form">
                 <input type="text" name="search" class="job-search-input"
                        placeholder="Search by title, ref (e.g. FS001), or location..."
