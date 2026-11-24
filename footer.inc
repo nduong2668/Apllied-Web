@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/navigation.inc'; ?>
 <footer id="main-footer" class="site-footer">
     <div id="footer-container" class="footer-layout">
         <div id="footer-company-info" class="footer-col company-info-col">
@@ -13,10 +14,9 @@
         <div id="footer-quick-links" class="footer-col quick-links-col">
             <h3 class="footer-heading">Navigation</h3>
             <ul id="footer-nav-list" class="footer-links-list">
-                <li class="footer-link-item"><a class="footer-nav-link" href="index.php">Home</a></li>
-                <li class="footer-link-item"><a class="footer-nav-link" href="jobs.php">Jobs</a></li>
-                <li class="footer-link-item"><a class="footer-nav-link" href="apply.php">Apply</a></li>
-                <li class="footer-link-item"><a class="footer-nav-link" href="about.php">About Us</a></li>
+                <?php foreach ($siteNavigation as $page): ?>
+                    <li class="footer-link-item"><a class="footer-nav-link" href="<?= $page['href'] ?>"><?= $page['label'] ?></a></li>
+                <?php endforeach; ?>
             </ul>
         </div>
 

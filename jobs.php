@@ -179,7 +179,7 @@ function renderListItems($text) {
             <ol class="job-order-list">
                 <li>Choose the position and note its reference number.</li>
                 <li>Prepare your CV and a short cover letter.</li>
-                <li>Complete the form on our <a href="apply.php">Apply page</a>.</li>
+                <li>Complete the form on our <a href="<?= $siteNavigation['apply']['href'] ?>">Apply page</a>.</li>
                 <li>Our HR team will contact shortlisted candidates within two weeks.</li>
             </ol>
             <p class="job-note"><small>We are an equal opportunity employer.</small></p>

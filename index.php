@@ -1,3 +1,4 @@
+<?php // GenAI assistance (OpenAI Codex): PHP includes and site navigation integration. ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,39 +26,7 @@
 </head>
 <body id="page-home" class="home-page">
 
-    <header id="main-header" class="site-header">
-        <div id="header-container" class="header-container">
-            
-            <div id="company-branding" class="branding-box">
-                <h1 id="site-title" class="company-name">Pacific Alliances Smart City Consultancy LTD</h1>
-                <p id="site-tagline" class="company-tagline">Intelligent Urban Infrastructure, Sustainable Digital Cities</p>
-            </div>
-
-            <nav id="main-navbar" class="site-navbar" aria-label="Main Navigation">
-                <ul id="navbar-menu" class="navbar-list">
-                    <li class="navbar-item">
-                        <a id="nav-link-home" class="navbar-link active" href="index.html">Home</a>
-                    </li>
-                    <li class="navbar-item">
-                        <a id="nav-link-jobs" class="navbar-link" href="jobs.html">Jobs</a>
-                    </li>
-                    <li class="navbar-item">
-                        <a id="nav-link-apply" class="navbar-link" href="apply.html">Apply</a>
-                    </li>
-                    <li class="navbar-item">
-                        <a id="nav-link-about" class="navbar-link" href="about.html">About Us</a>
-                    </li>
-                </ul>
-            </nav>
-
-            <div id="header-logo-container" class="logo-box">
-                <a href="index.html" class="logo-link">
-                    <img id="company-logo" class="site-logo" src="images/logo.svg" alt="Pacific Alliances Smart City Consultancy LTD Logo">
-                </a>
-            </div>
-
-        </div>
-    </header>
+    <?php require __DIR__ . '/header.inc'; ?>
 
     <main id="main-content" class="content-wrapper">
 
@@ -69,8 +38,8 @@
                     Pacific Alliances Smart City Consultancy LTD is an industry-leading infrastructure consultancy working with municipal councils, transit authorities, and utility partners across the Asia-Pacific. We design and deliver next-generation digital platforms for smart transport, real-time energy monitoring, and unified urban services management.
                 </p>
                 <div id="hero-actions" class="hero-button-group">
-                    <a id="hero-btn-explore" class="action-btn primary-btn" href="jobs.html">Explore Open Positions</a>
-                    <a id="hero-btn-apply" class="action-btn secondary-btn" href="apply.html">Submit Application</a>
+                    <a id="hero-btn-explore" class="action-btn primary-btn" href="jobs.php">Explore Open Positions</a>
+                    <a id="hero-btn-apply" class="action-btn secondary-btn" href="<?= $siteNavigation['apply']['href'] ?>">Submit Application</a>
                 </div>
 
                 <figure class="company-feature-image">
@@ -82,10 +51,10 @@
 
         <section id="search-section" class="search-form-section">
             <div class="content-box" style="text-align: center; max-width: 820px; margin: 0 auto;">
-                <form class="search-form" action="jobs.html" method="get" role="search">
+                <form class="search-form" action="jobs.php" method="get" role="search">
                     <label for="site-search" class="search-label">Search Open Smart City Consultancy &amp; Urban Infrastructure Roles</label>
                     <div class="search-box-wrapper">
-                        <input type="search" id="site-search" name="q" class="search-input" placeholder="e.g. Smart Transport Engineer, IoT Energy Analyst, Urban Systems Architect, SCADA..." required>
+                        <input type="search" id="site-search" name="search" class="search-input" placeholder="e.g. Full-Stack Engineer, DO017, Melbourne" required>
                         <button type="submit" class="search-button">Search</button>
                     </div>
                 </form>
@@ -245,7 +214,7 @@
                     <p class="job-brief">
                         Architect and deploy real-time transit telematics interfaces and microservices using React, Node.js, and high-performance WebSocket streams.
                     </p>
-                    <a class="card-link" href="jobs.html#job-fullstack">View Job Description &rarr;</a>
+                    <a class="card-link" href="jobs.php#job-fs001">View Job Description &rarr;</a>
                 </article>
 
                 <article id="job-card-devops" class="content-box job-preview-card">
@@ -256,7 +225,7 @@
                     <p class="job-brief">
                         Engineer secure, fault-tolerant cloud infrastructures and automated CI/CD pipelines governing critical smart grid SCADA and urban services data.
                     </p>
-                    <a class="card-link" href="jobs.html#job-devops">View Job Description &rarr;</a>
+                    <a class="card-link" href="jobs.php#job-do017">View Job Description &rarr;</a>
                 </article>
 
                 <article id="job-card-iot" class="content-box job-preview-card">
@@ -267,14 +236,14 @@
                     <p class="job-brief">
                         Develop streaming data pipelines for municipal sensor fleets, microgrid battery storage systems, and urban digital twin visualization dashboards.
                     </p>
-                    <a class="card-link" href="jobs.html#job-smartcity">View Job Description &rarr;</a>
+                    <a class="card-link" href="jobs.php#job-dt023">View Job Description &rarr;</a>
 
                 </article>
 
             </div>
 
             <div id="all-jobs-link-box" class="section-footer-action">
-                <a id="btn-view-all-jobs" class="action-btn text-link-btn" href="jobs.html">View All Positions on Jobs Page &rarr;</a>
+                <a id="btn-view-all-jobs" class="action-btn text-link-btn" href="jobs.php">View All Positions on Jobs Page &rarr;</a>
             </div>
         </section>
 
@@ -289,13 +258,13 @@
                 <div id="step-box-1" class="content-box process-step-box">
                     <div class="step-number">Step 1</div>
                     <h3 class="step-title">Discover Opportunities</h3>
-                    <p class="step-text">Explore our open positions on the <a href="jobs.html" class="inline-link">Jobs page</a> to find the urban consultancy role that aligns with your expertise.</p>
+                    <p class="step-text">Explore our open positions on the <a href="jobs.php" class="inline-link">Jobs page</a> to find the urban consultancy role that aligns with your expertise.</p>
                 </div>
 
                 <div id="step-box-2" class="content-box process-step-box">
                     <div class="step-number">Step 2</div>
                     <h3 class="step-title">Apply Online</h3>
-                    <p class="step-text">Submit your credentials and experience through our application form on the <a href="apply.html" class="inline-link">Apply page</a>.</p>
+                    <p class="step-text">Submit your credentials and experience through our application form on the <a href="<?= $siteNavigation['apply']['href'] ?>" class="inline-link">Apply page</a>.</p>
                 </div>
 
                 <div id="step-box-3" class="content-box process-step-box">
@@ -335,76 +304,15 @@
                     Your expertise can transform metropolitan infrastructure across the Asia-Pacific. Explore our open roles or apply today!
                 </p>
                 <div id="cta-buttons" class="cta-button-group">
-                    <a id="cta-btn-jobs" class="action-btn primary-btn" href="jobs.html">Browse Job Roles</a>
-                    <a id="cta-btn-apply" class="action-btn secondary-btn" href="apply.html">Apply Directly</a>
+                    <a id="cta-btn-jobs" class="action-btn primary-btn" href="jobs.php">Browse Job Roles</a>
+                    <a id="cta-btn-apply" class="action-btn secondary-btn" href="<?= $siteNavigation['apply']['href'] ?>">Apply Directly</a>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <footer id="main-footer" class="site-footer">
-        <div id="footer-container" class="footer-layout">
-
-            <div id="footer-company-info" class="footer-col company-info-col">
-                <h3 id="footer-company-title" class="footer-heading">Pacific Alliances Smart City Consultancy LTD</h3>
-                <p id="footer-company-address" class="footer-text address-text">
-                    <strong>Offices:</strong> 114 Special Street, Melbourne, Australia
-                </p>
-                <p id="footer-company-slogan" class="footer-text slogan-text">
-                    Engineering Smarter, Greener and Resilient Urban Infrastructure across the Asia-Pacific.
-                </p>
-            </div>
-
-            <div id="footer-quick-links" class="footer-col quick-links-col">
-                <h3 class="footer-heading">Navigation</h3>
-                <ul id="footer-nav-list" class="footer-links-list">
-                    <li class="footer-link-item"><a class="footer-nav-link" href="index.html">Home</a></li>
-                    <li class="footer-link-item"><a class="footer-nav-link" href="jobs.html">Jobs</a></li>
-                    <li class="footer-link-item"><a class="footer-nav-link" href="apply.html">Apply</a></li>
-                    <li class="footer-link-item"><a class="footer-nav-link" href="about.html">About Us</a></li>
-                </ul>
-            </div>
-
-            <div id="footer-contact-info" class="footer-col contacts-col">
-                <h3 class="footer-heading">Consultancy &amp; HR Enquiries</h3>
-                <ul id="footer-contact-list" class="footer-contact-items">
-                    <li class="contact-item">
-                        <strong>Careers Email:</strong> 
-                        <a class="contact-link" href="mailto:careers@pacificalliances-smartcity.com.au">careers@pacificalliances-smartcity.com.au</a>
-                    </li>
-                    <li class="contact-item">
-                        <strong>General Inquiries:</strong> 
-                        <a class="contact-link" href="mailto:info@pacificalliances-smartcity.com.au">info@pacificalliances-smartcity.com.au</a>
-                    </li>
-                    <li class="contact-item">
-                        <strong>Advisory Hotline:</strong> 
-                        <a class="contact-link" href="tel:+61392148000">+61 3 9214 8000</a>
-                    </li>
-                    <li class="contact-item">
-                        <strong>Business Hours:</strong> Mon - Fri, 08:30 AM - 05:30 PM (AEST / SGT)
-                    </li>
-                </ul>
-            </div>
-
-            <div id="footer-social-info" class="footer-col social-col">
-                <h3 class="footer-heading">Project Portals &amp; Repositories</h3>
-                <p class="footer-text">Access sprint tracking boards, open source repositories, and professional networks:</p>
-                <ul id="footer-social-list" class="footer-social-links">
-                    <li class="social-item"><a class="social-link" href="https://student-team-x2fsvdeh.atlassian.net/jira/software/projects/KAN/boards/1?filter=&amp;groupBy=none" target="_blank" rel="noopener noreferrer">Jira Project Board</a></li>
-                    <li class="social-item"><a class="social-link" href="https://github.com/nduong2668/Apllied-Web" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
-                    <li class="social-item"><a class="social-link" href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                </ul>
-            </div>
-
-        </div>
-
-        <div id="footer-copyright" class="footer-bottom-bar">
-            <p id="copyright-notice" class="copyright-text">
-                &copy; 2026 Pacific Alliances Smart City Consultancy LTD. All rights reserved. | Built for COS10011 Assignment 1 (Group G02 - Smart City Infrastructure Consultancy).
-            </p>
-        </div>
-    </footer>
+    <?php require __DIR__ . '/footer.inc'; ?>
 
 </body>
 </html>

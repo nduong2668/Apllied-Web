@@ -1,4 +1,7 @@
-<?php $current_page = basename($_SERVER['PHP_SELF']); ?>
+<?php
+require_once __DIR__ . '/navigation.inc';
+$currentPage = basename($_SERVER['SCRIPT_NAME'] ?? '');
+?>
 <header id="main-header" class="site-header">
     <div id="header-container" class="header-container">
         <div id="company-branding" class="branding-box">
@@ -8,18 +11,13 @@
 
         <nav id="main-navbar" class="site-navbar" aria-label="Main Navigation">
             <ul id="navbar-menu" class="navbar-list">
-                <li class="navbar-item">
-                    <a id="nav-link-home" class="navbar-link <?php echo ($current_page == 'index.php') ? 'active' : ''; ?>" href="index.php">Home</a>
-                </li>
-                <li class="navbar-item">
-                    <a id="nav-link-jobs" class="navbar-link <?php echo ($current_page == 'jobs.php') ? 'active' : ''; ?>" href="jobs.php">Jobs</a>
-                </li>
-                <li class="navbar-item">
-                    <a id="nav-link-apply" class="navbar-link <?php echo ($current_page == 'apply.php') ? 'active' : ''; ?>" href="apply.php">Apply</a>
-                </li>
-                <li class="navbar-item">
-                    <a id="nav-link-about" class="navbar-link <?php echo ($current_page == 'about.php') ? 'active' : ''; ?>" href="about.php">About Us</a>
-                </li>
+                <?php foreach ($siteNavigation as $pageId => $page): ?>
+                    <?php $isCurrentPage = $currentPage === $page['href']; ?>
+                    <li class="navbar-item">
+                        <a id="nav-link-<?= $pageId ?>" class="navbar-link<?= $isCurrentPage ? ' active' : '' ?>"
+                           href="<?= $page['href'] ?>"<?= $isCurrentPage ? ' aria-current="page"' : '' ?>><?= $page['label'] ?></a>
+                    </li>
+                <?php endforeach; ?>
             </ul>
         </nav>
 
