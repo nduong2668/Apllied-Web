@@ -6,7 +6,7 @@ $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
 if (!$conn) {
     die("<p>Database connection failure: " . htmlspecialchars(mysqli_connect_error()) . "</p>");
 }
-// search bar process; get = searched keywords in url WITHOUT modification
+// create search bar process; get = searched keywords in url WITHOUT modification
 $search = isset($_GET['search']) ? trim($_GET['search']) : '';
 // sql query + check availability; prepared statments avoid sql injections (AI)
 if ($search !== '') {
@@ -100,7 +100,7 @@ function renderListItems($text) {
                 Join a premier consultancy organisation working with city councils and industry partners to develop digital platforms for smart transport, 
                 energy monitoring, and urban services management. Below are our open positions. Please quote the reference number when you apply.
             </p>
-<!-- save keywords typed -->
+<!-- save keywords typed + search bar -->
             <form method="get" action="jobs.php" class="job-search-form">
                 <input type="text" name="search" class="job-search-input"
                        placeholder="Search by title, ref (e.g. FS001), or location..."
