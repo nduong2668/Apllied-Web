@@ -18,6 +18,7 @@ if ($search !== '') {
             ORDER BY job_id ASC";
     $stmt = mysqli_prepare($conn, $sql);
     $param = "%" . $search . "%";
+    // avoid sql injections
     mysqli_stmt_bind_param($stmt, "ssss", $param, $param, $param, $param);
     mysqli_stmt_execute($stmt);
     $result = mysqli_stmt_get_result($stmt);
@@ -25,7 +26,7 @@ if ($search !== '') {
     $sql = "SELECT * FROM jobs ORDER BY job_id ASC";
     $result = mysqli_query($conn, $sql);
 }
-// split list: \n -> <li> tags + prevent xss (AI)
+// split list: \n -> <li> tags + prevent xss: turning special chars into safe entities (AI)
 function renderListItems($text) {
     $items = explode("\n", $text);
     $html = "";
